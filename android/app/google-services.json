@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "506191668527",
+    "project_id": "be-ai-mobile",
+    "storage_bucket": "be-ai-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506191668527:android:672a0db92a696125262dda",
+        "android_client_info": {
+          "package_name": "com.example.be_ai_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3czHje9ymEF9b-6HG3-YG05nCF0CGg34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
