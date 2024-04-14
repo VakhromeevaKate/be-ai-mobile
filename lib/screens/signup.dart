@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../theme/colors/light_colors.dart';
+import './diary.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +94,8 @@ class SignUpForm extends StatelessWidget {
                   foregroundColor: Colors.white
                 ),
                 onPressed: (){
-                  debugPrint('Sign up');
+                  // Navigator.pushNamed(context, '/diary');
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => DiaryScreen(key: UniqueKey())));
                 },
                 child: const Text('Sign up'),
               ),
