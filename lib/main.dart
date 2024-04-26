@@ -1,7 +1,6 @@
-import 'package:be_ai_mobile/screens/diary.dart';
+import 'package:be_ai_mobile/screens/home.dart';
 import 'package:be_ai_mobile/screens/signup.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -16,7 +15,7 @@ Future<void> main() async {
       '/': (BuildContext context) => const MainApp(),
       '/login': (BuildContext context) => LoginScreen(key: UniqueKey()),
       '/signup': (BuildContext context) => SignUpScreen(key: UniqueKey()),
-      '/diary': (BuildContext context) => DiaryScreen(key: UniqueKey()),
+      '/home': (BuildContext context) => HomeScreen(key: UniqueKey()),
     },
   ));
 }
@@ -26,13 +25,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: "be.ai",
-        theme: ThemeData(
-            primaryColor: const Color.fromRGBO(50, 65, 85, 1),
-            textTheme:
-                const TextTheme(titleLarge: TextStyle(color: Colors.white))),
-        home: const HomePage());
+    return const HomePage();
   }
 }
 
@@ -44,7 +37,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('be.ai'),
-          leading: const Icon(Icons.fitness_center),
+          leading: const Icon(Icons.fastfood),
         ),
         body: Container(
           alignment: Alignment.bottomCenter,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/colors/light_colors.dart';
-import './diary.dart';
+import './home.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -29,23 +29,23 @@ class SignUpForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextField(
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                borderSide:  BorderSide(color: Colors.grey),
+                borderSide:  const BorderSide(color: Colors.grey),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                borderSide:  BorderSide(color: LightColors.kGreen),
+                borderSide:  const BorderSide(color: LightColors.kGreen),
               ),
               labelText: 'Email',
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextField(
             obscureText: true,
             enableSuggestions: false,
@@ -53,18 +53,18 @@ class SignUpForm extends StatelessWidget {
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                borderSide:  BorderSide(color: Colors.grey),
+                borderSide:  const BorderSide(color: Colors.grey),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                borderSide:  BorderSide(color: LightColors.kGreen),
+                borderSide:  const BorderSide(color: LightColors.kGreen),
               ),
               labelText: 'Password',
             ),
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: TextField(
             obscureText: true,
             enableSuggestions: false,
@@ -72,11 +72,11 @@ class SignUpForm extends StatelessWidget {
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                borderSide:  BorderSide(color: Colors.grey),
+                borderSide:  const BorderSide(color: Colors.grey),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                borderSide:  BorderSide(color: LightColors.kGreen),
+                borderSide:  const BorderSide(color: LightColors.kGreen),
               ),
               labelText: 'Repeat password',
             ),
@@ -95,7 +95,7 @@ class SignUpForm extends StatelessWidget {
                 ),
                 onPressed: (){
                   // Navigator.pushNamed(context, '/diary');
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DiaryScreen(key: UniqueKey())));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
                 },
                 child: const Text('Sign up'),
               ),

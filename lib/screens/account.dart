@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Diary extends StatelessWidget {
-  const Diary({super.key});
+class Account extends StatelessWidget {
+  const Account({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +10,7 @@ class Diary extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: Text('Diary Screen'),
+          child: Text('Account Screen'),
         ),
       ],
     );
