@@ -51,8 +51,8 @@ class HomePage extends StatelessWidget {
                     foregroundColor: Colors.white
                 ),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(key: UniqueKey())));
-                  // Navigator.pushNamed(context, '/login');
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(key: UniqueKey())));
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: const Text('Login'),
               ),

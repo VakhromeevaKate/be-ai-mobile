@@ -8,14 +8,11 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const appTitle = 'Sign Up';
-    return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(appTitle),
-        ),
-        body: const SignUpForm(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(appTitle),
       ),
+      body: const SignUpForm(),
     );
   }
 }
@@ -94,8 +91,8 @@ class SignUpForm extends StatelessWidget {
                   foregroundColor: Colors.white
                 ),
                 onPressed: (){
-                  // Navigator.pushNamed(context, '/diary');
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
+                  Navigator.pushNamed(context, '/home');
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
                 },
                 child: const Text('Sign up'),
               ),

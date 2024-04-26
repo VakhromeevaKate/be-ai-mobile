@@ -8,15 +8,12 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const appTitle = 'Login';
-    return MaterialApp(
-      title: appTitle,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(appTitle),
-        ),
-        body: const LoginForm(),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(appTitle),
       ),
-    );
+      body: const LoginForm(),
+      );
   }
 }
 
@@ -75,8 +72,8 @@ class LoginForm extends StatelessWidget {
                 foregroundColor: Colors.white
               ),
               onPressed: (){
-                // Navigator.pushNamed(context, '/home');
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
+                Navigator.pushNamed(context, '/home');
+                // Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
               },
               child: const Text('Login'),
             ),
