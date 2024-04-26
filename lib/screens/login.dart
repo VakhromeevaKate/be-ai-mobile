@@ -1,4 +1,3 @@
-import 'package:be_ai_mobile/screens/home.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:flutter/material.dart';
 

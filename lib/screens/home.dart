@@ -1,6 +1,7 @@
 import 'package:be_ai_mobile/screens/account.dart';
 import 'package:be_ai_mobile/screens/camera.dart';
 import 'package:be_ai_mobile/screens/diary.dart';
+import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:flutter/material.dart';
 import '../widgets/bottom_navigation_bar.dart';
 
@@ -14,19 +15,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   var selectedScreenIndex = 0;
-
   var appTitle = 'Main';
 
-  Widget getBody() {
-    switch(selectedScreenIndex) {
-      case 1:
-        return const Camera();
-      case 2:
-        return const Account();
-      default:
-        return const Diary();
-    }
-  }
+  final pageController = PageController();
 
   void setAppTitle(int index) {
     setState(() {
@@ -43,11 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void setScreen(int index) {
     setState(() => selectedScreenIndex = index);
+    pageController.animateToPage(index, duration: const Duration(milliseconds: 200), curve: Curves.linear);
+    setAppTitle(index);
   }
 
-  void setData(int index) {
-    setAppTitle(index);
-    setScreen(index);
+  void setPage(int index) {
+    setState(() => selectedScreenIndex = index);
   }
 
   @override
@@ -55,8 +47,17 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         appBar: AppBar(
           title: Text(appTitle),
+          backgroundColor: LightColors.kLightGreen,
         ),
-        body: getBody(),
+        body: PageView(
+          controller: pageController,
+          children: const [
+            Diary(),
+            Camera(),
+            Account(),
+          ],
+          onPageChanged: setPage,
+        ),
         bottomNavigationBar: BEBottomNavigationBar(
           currentIndex: selectedScreenIndex,
           onTap: setScreen,

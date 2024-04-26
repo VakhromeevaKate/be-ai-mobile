@@ -31,26 +31,25 @@ class _BEBottomNavigationBarState
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book),
-            label: 'Diary',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'Camera',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Account',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: LightColors.kGreen,
-        onTap: _onItemTapped,
-      ),
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.book),
+          label: 'Diary',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.camera),
+          label: 'Camera',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person),
+          label: 'Account',
+        ),
+      ],
+      currentIndex: _selectedIndex,
+      selectedItemColor: LightColors.kGreen,
+      onTap: _onItemTapped,
+      backgroundColor: LightColors.kLightGreen,
     );
   }
 }
