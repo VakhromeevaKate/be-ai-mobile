@@ -51,12 +51,12 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: PageView(
           controller: pageController,
+          onPageChanged: setPage,
           children: const [
             Diary(),
             Camera(),
             Account(),
           ],
-          onPageChanged: setPage,
         ),
         bottomNavigationBar: BEBottomNavigationBar(
           currentIndex: selectedScreenIndex,

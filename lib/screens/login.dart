@@ -10,6 +10,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(appTitle),
+        backgroundColor: LightColors.kLightGreen,
       ),
       body: const LoginForm(),
       );
