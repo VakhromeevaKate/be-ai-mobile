@@ -1,4 +1,5 @@
 import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'display_picture_screen.dart';
 
@@ -88,7 +89,10 @@ class TakePictureScreenState extends State<TakePictureScreen> {
             );
           } catch (e) {
             // If an error occurs, log the error to the console.
-            print(e);
+            if (kDebugMode) {
+              // ToDo: add logging when backend appears
+              print(e);
+            }
           }
         },
         child: const Icon(Icons.camera_alt),
