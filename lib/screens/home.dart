@@ -3,7 +3,6 @@ import 'package:be_ai_mobile/screens/camera.dart';
 import 'package:be_ai_mobile/screens/diary.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:flutter/material.dart';
-import '../widgets/bottom_navigation_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   var selectedScreenIndex = 0;
-  var appTitle = 'Main';
+  var appTitle = 'Diary';
 
   final pageController = PageController();
 
@@ -51,17 +50,32 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: PageView(
           controller: pageController,
-          onPageChanged: setPage,
+          onPageChanged: (value) => setPage(value),
           children: const [
             Diary(),
             Camera(),
             Account(),
           ],
         ),
-        bottomNavigationBar: BEBottomNavigationBar(
-          currentIndex: selectedScreenIndex,
-          onTap: setScreen,
-        ),
+        bottomNavigationBar: BottomNavigationBar(
+            items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.book),
+              label: 'Diary',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.camera),
+              label: 'Camera',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Account',
+            )],
+            currentIndex: selectedScreenIndex,
+            selectedItemColor: LightColors.kGreen,
+            onTap: setScreen,
+            backgroundColor: LightColors.kLightGreen,
+            )
     );
   }
 }
