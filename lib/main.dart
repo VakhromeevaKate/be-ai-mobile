@@ -1,6 +1,9 @@
+import 'package:be_ai_mobile/screens/display_picture_screen.dart';
 import 'package:be_ai_mobile/screens/home.dart';
 import 'package:be_ai_mobile/screens/signup.dart';
+import 'package:be_ai_mobile/screens/take_picture_screen.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -8,6 +11,9 @@ import './screens/login.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+  final firstCamera = cameras.first;
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MaterialApp(
     initialRoute: '/',
@@ -16,6 +22,8 @@ Future<void> main() async {
       '/login': (BuildContext context) => LoginScreen(key: UniqueKey()),
       '/signup': (BuildContext context) => SignUpScreen(key: UniqueKey()),
       '/home': (BuildContext context) => HomeScreen(key: UniqueKey()),
+      '/camera': (BuildContext context) => TakePictureScreen(key: UniqueKey(), camera: firstCamera),
+      '/gallery': (BuildContext context) => DisplayPictureScreen(key: UniqueKey(), imagePath: '',)
     },
   ));
 }
