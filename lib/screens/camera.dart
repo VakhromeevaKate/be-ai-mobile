@@ -8,30 +8,30 @@ class Camera extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
           child: Text('Take a photo of your food'),
         ),
-        Row(
-          children: <Widget>[
-            Center(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  textStyle: const TextStyle(
-                    fontSize: 20,
-                  ),
-                  backgroundColor: LightColors.kGreen,
-                  foregroundColor: Colors.white
+        Center(
+          child:
+            IconButton(
+              icon: const Icon(Icons.camera_alt),
+              style: ElevatedButton.styleFrom(
+                textStyle: const TextStyle(
+                  fontSize: 32,
                 ),
-                onPressed: (){
-                  Navigator.pushNamed(context, '/camera');
-                },
-                child: const Text('Take photo'),
+                backgroundColor: LightColors.kGreen,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               ),
+              onPressed: (){
+                Navigator.pushNamed(context, '/camera');
+              },
             ),
-          ],
         ),
       ],
     );
