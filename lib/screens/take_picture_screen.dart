@@ -1,7 +1,9 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'display_picture_screen.dart';
+import 'package:onnxruntime/onnxruntime.dart';
 
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
@@ -19,6 +21,7 @@ class TakePictureScreen extends StatefulWidget {
 class TakePictureScreenState extends State<TakePictureScreen> {
   late CameraController _controller;
   late Future<void> _initializeControllerFuture;
+  late OrtSession _session;
 
   @override
   void initState() {
@@ -34,6 +37,8 @@ class TakePictureScreenState extends State<TakePictureScreen> {
 
     // Next, initialize the controller. This returns a Future.
     _initializeControllerFuture = _controller.initialize();
+    OrtEnv.instance.init();
+    inferModel();
   }
 
   @override
@@ -41,6 +46,15 @@ class TakePictureScreenState extends State<TakePictureScreen> {
     // Dispose of the controller when the widget is disposed.
     _controller.dispose();
     super.dispose();
+    OrtEnv.instance.release();
+  }
+
+  void inferModel() async {
+    final sessionOptions = OrtSessionOptions();
+    const assetFileName = 'assets/models/model.onnx';
+    final rawAssetFile = await rootBundle.load(assetFileName);
+    final bytes = rawAssetFile.buffer.asUint8List();
+    _session = OrtSession.fromBuffer(bytes, sessionOptions!);
   }
 
   @override
