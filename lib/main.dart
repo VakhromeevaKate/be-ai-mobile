@@ -6,8 +6,10 @@ import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'firebase_options.dart';
 import './screens/login.dart';
+import 'generated/l10n.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,6 +18,13 @@ Future<void> main() async {
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(MaterialApp(
+    localizationsDelegates: const [
+      S.delegate,
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
+    ],
+    supportedLocales: S.delegate.supportedLocales,
     initialRoute: '/',
     routes: {
       '/': (BuildContext context) => const MainApp(),
@@ -44,26 +53,65 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('be.ai'),
+          title: Text(S.of(context).title),
           leading: const Icon(Icons.fastfood),
+          backgroundColor: LightColors.kLightGreen,
         ),
         body: Container(
           alignment: Alignment.bottomCenter,
-            child: Center(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    textStyle: const TextStyle(
-                      fontSize: 20,
-                    ),
-                    backgroundColor: LightColors.kGreen,
-                    foregroundColor: Colors.white
+            child: Column(
+              children: [
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    child: Text(S.of(context).WelcomeToBEAI),
                 ),
-                onPressed: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(key: UniqueKey())));
-                  Navigator.pushNamed(context, '/login');
-                },
-                child: const Text('Login'),
-              ),
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    child: SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                textStyle: const TextStyle(
+                                    fontSize: 32,
+                                ),
+                                backgroundColor: LightColors.kGreen,
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                            ),
+                          onPressed: (){
+                            // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(key: UniqueKey())));
+                            Navigator.pushNamed(context, '/login');
+                          },
+                          child: Text(S.of(context).Login),
+                        )
+                    )
+                ),
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                    child: Text(S.of(context).NoAccount),
+                ),
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    child: SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                textStyle: const TextStyle(
+                                    fontSize: 32,
+                                ),
+                                backgroundColor: LightColors.kGreen,
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                            ),
+                            onPressed: (){
+                              // Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(key: UniqueKey())));
+                              Navigator.pushNamed(context, '/signup');
+                            },
+                            child: Text(S.of(context).SighUp),
+                        )
+                    ),
+                ),
+              ],
             )
         ));
   }
