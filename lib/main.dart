@@ -61,6 +61,10 @@ class HomePage extends StatelessWidget {
           alignment: Alignment.bottomCenter,
             child: Column(
               children: [
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  child: Image(image: AssetImage('assets/images/icon.png')),
+                ),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     child: Text(S.of(context).WelcomeToBEAI),
