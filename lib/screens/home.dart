@@ -4,6 +4,8 @@ import 'package:be_ai_mobile/screens/inner/diary.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../generated/l10n.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -18,23 +20,23 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final pageController = PageController();
 
-  void setAppTitle(int index) {
+  void setAppTitle(int index, BuildContext context) {
     setState(() {
       switch(index) {
         case 1:
-          appTitle = 'Camera';
+          appTitle = S.of(context).Camera;
         case 2:
-          appTitle = 'Account';
+          appTitle = S.of(context).Account;
         default:
-          appTitle = 'Diary';
+          appTitle = S.of(context).Diary;
       }
     });
   }
 
-  void setScreen(int index) {
+  void setScreen(int index, BuildContext context) {
     setState(() => selectedScreenIndex = index);
     pageController.animateToPage(index, duration: const Duration(milliseconds: 200), curve: Curves.linear);
-    setAppTitle(index);
+    setAppTitle(index, context);
   }
 
   void setPage(int index) {
@@ -58,22 +60,22 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-            items: const <BottomNavigationBarItem>[
+            items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.book),
-              label: 'Diary',
+              icon: const Icon(Icons.book),
+              label: S.of(context).Diary,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.camera),
-              label: 'Camera',
+              icon: const Icon(Icons.camera),
+              label: S.of(context).Camera,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Account',
+              icon: const Icon(Icons.person),
+              label: S.of(context).Account,
             )],
             currentIndex: selectedScreenIndex,
             selectedItemColor: LightColors.kGreen,
-            onTap: setScreen,
+            onTap: (i) => setScreen(i, context),
             backgroundColor: LightColors.kLightGreen,
             )
     );

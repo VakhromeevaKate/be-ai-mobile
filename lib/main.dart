@@ -5,7 +5,6 @@ import 'package:be_ai_mobile/screens/signup.dart';
 import 'package:be_ai_mobile/screens/take_picture_screen.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:camera/camera.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -64,13 +63,11 @@ class HomePage extends StatelessWidget {
           alignment: Alignment.bottomCenter,
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                    child: const Image(image: AssetImage('assets/images/icon.png'))
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/icon.png'),
+                    radius: 180,
                   ),
                 ),
                 Padding(

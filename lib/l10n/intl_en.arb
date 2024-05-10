@@ -15,5 +15,8 @@
   "EatingHabits": "Eating habits",
   "PhysicalActivity": "Physical activity",
   "Continue": "Continue",
-  "Return": "Return"
+  "Return": "Return",
+  "Account": "Account",
+  "Diary": "Diary",
+  "Camera": "Camera"
 }

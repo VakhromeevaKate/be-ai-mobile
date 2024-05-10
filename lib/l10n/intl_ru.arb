@@ -15,5 +15,8 @@
   "EatingHabits": "Пищевые привычки",
   "PhysicalActivity": "Физческая активность",
   "Continue": "Далее",
-  "Return": "Назад"
+  "Return": "Назад",
+  "Account": "Профиль",
+  "Diary": "Дневник",
+  "Camera": "Камера"
 }
