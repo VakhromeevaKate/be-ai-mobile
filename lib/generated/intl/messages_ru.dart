@@ -22,8 +22,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Activity": MessageLookupByLibrary.simpleMessage("Активность"),
+        "Common": MessageLookupByLibrary.simpleMessage("Общее"),
+        "CommonQuestions":
+            MessageLookupByLibrary.simpleMessage("Общие вопросы"),
+        "EatingHabits":
+            MessageLookupByLibrary.simpleMessage("Пищевые привычки"),
+        "Email":
+            MessageLookupByLibrary.simpleMessage("Адрес электронной почты"),
         "Login": MessageLookupByLibrary.simpleMessage("Войти"),
+        "Meal": MessageLookupByLibrary.simpleMessage("Еда"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
+        "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
+        "PhysicalActivity":
+            MessageLookupByLibrary.simpleMessage("Физческая активность"),
+        "Questionnaire": MessageLookupByLibrary.simpleMessage("Анкета"),
+        "RepeatPassword":
+            MessageLookupByLibrary.simpleMessage("Повторите пароль"),
         "SighUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Добро пожаловать в be.ai! - Ваш помощник по интуитивному правильному питанию"),

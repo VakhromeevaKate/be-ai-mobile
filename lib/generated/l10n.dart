@@ -99,6 +99,106 @@ class S {
       args: [],
     );
   }
+
+  /// `Email`
+  String get Email {
+    return Intl.message(
+      'Email',
+      name: 'Email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get Password {
+    return Intl.message(
+      'Password',
+      name: 'Password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat password`
+  String get RepeatPassword {
+    return Intl.message(
+      'Repeat password',
+      name: 'RepeatPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Questionnaire`
+  String get Questionnaire {
+    return Intl.message(
+      'Questionnaire',
+      name: 'Questionnaire',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Common`
+  String get Common {
+    return Intl.message(
+      'Common',
+      name: 'Common',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meal`
+  String get Meal {
+    return Intl.message(
+      'Meal',
+      name: 'Meal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activity`
+  String get Activity {
+    return Intl.message(
+      'Activity',
+      name: 'Activity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Common questions`
+  String get CommonQuestions {
+    return Intl.message(
+      'Common questions',
+      name: 'CommonQuestions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eating habits`
+  String get EatingHabits {
+    return Intl.message(
+      'Eating habits',
+      name: 'EatingHabits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Physical activity`
+  String get PhysicalActivity {
+    return Intl.message(
+      'Physical activity',
+      name: 'PhysicalActivity',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

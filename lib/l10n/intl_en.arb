@@ -3,5 +3,15 @@
   "Login": "Login",
   "SighUp": "Sigh up",
   "NoAccount": "No account?",
-  "WelcomeToBEAI": "Welcome to be.ai - you intuitive nutrition assistant!"
+  "WelcomeToBEAI": "Welcome to be.ai - you intuitive nutrition assistant!",
+  "Email": "Email",
+  "Password": "Password",
+  "RepeatPassword": "Repeat password",
+  "Questionnaire": "Questionnaire",
+  "Common": "Common",
+  "Meal": "Meal",
+  "Activity": "Activity",
+  "CommonQuestions": "Common questions",
+  "EatingHabits": "Eating habits",
+  "PhysicalActivity": "Physical activity"
 }

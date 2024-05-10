@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../generated/l10n.dart';
 import '../theme/colors/light_colors.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -76,7 +77,7 @@ class SignUpForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50.0),
                   borderSide:  const BorderSide(color: LightColors.kGreen),
                 ),
-                labelText: 'Repeat password',
+                labelText: S.of(context).RepeatPassword,
               ),
             ),
           ),
@@ -94,10 +95,10 @@ class SignUpForm extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   ),
                   onPressed: (){
-                    Navigator.pushNamed(context, '/home');
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
+                    // Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/questionnaire');
                   },
-                  child: const Text('Sign up'),
+                  child: Text(S.of(context).SighUp),
                 ),
               ),
           )

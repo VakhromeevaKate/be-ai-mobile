@@ -30,7 +30,6 @@ flutter:
   assets:
     - assets/models/model.onnx
     - assets/images/icon.png
-    - assets/images
 
 flutter_launcher_icons:
   android: true

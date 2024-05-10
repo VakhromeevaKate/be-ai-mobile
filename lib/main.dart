@@ -1,9 +1,11 @@
 import 'package:be_ai_mobile/screens/display_picture_screen.dart';
 import 'package:be_ai_mobile/screens/home.dart';
+import 'package:be_ai_mobile/screens/questionnaire.dart';
 import 'package:be_ai_mobile/screens/signup.dart';
 import 'package:be_ai_mobile/screens/take_picture_screen.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:camera/camera.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -30,6 +32,7 @@ Future<void> main() async {
       '/': (BuildContext context) => const MainApp(),
       '/login': (BuildContext context) => LoginScreen(key: UniqueKey()),
       '/signup': (BuildContext context) => SignUpScreen(key: UniqueKey()),
+      '/questionnaire': (BuildContext context) => QuestionnaireScreen(key: UniqueKey()),
       '/home': (BuildContext context) => HomeScreen(key: UniqueKey()),
       '/camera': (BuildContext context) => TakePictureScreen(key: UniqueKey(), camera: firstCamera),
       '/gallery': (BuildContext context) => DisplayPictureScreen(key: UniqueKey(), imagePath: '',)
@@ -61,9 +64,14 @@ class HomePage extends StatelessWidget {
           alignment: Alignment.bottomCenter,
             child: Column(
               children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                  child: Image(image: AssetImage('assets/images/icon.png')),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                    child: const Image(image: AssetImage('assets/images/icon.png'))
+                  ),
                 ),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),

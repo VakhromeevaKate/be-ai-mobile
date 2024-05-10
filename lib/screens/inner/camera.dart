@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme/colors/light_colors.dart';
+import '../../theme/colors/light_colors.dart';
 
 class Camera extends StatelessWidget {
   const Camera({super.key});

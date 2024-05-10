@@ -1,15 +1,16 @@
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../generated/l10n.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Login';
     return Scaffold(
       appBar: AppBar(
-        title: const Text(appTitle),
+        title: Text(S.of(context).Login),
         backgroundColor: LightColors.kLightGreen,
       ),
       body: const LoginForm(),
@@ -40,7 +41,7 @@ class LoginForm extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50.0),
                     borderSide:  const BorderSide(color: LightColors.kGreen),
                   ),
-                  labelText: 'Email',
+                  labelText: S.of(context).Email,
                 ),
               ),
             ),
@@ -59,7 +60,7 @@ class LoginForm extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50.0),
                     borderSide:  const BorderSide(color: LightColors.kGreen),
                   ),
-                  labelText: 'Password',
+                  labelText: S.of(context).Password,
                 ),
               ),
             ),
@@ -77,8 +78,8 @@ class LoginForm extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   ),
                   onPressed: (){
-                    Navigator.pushNamed(context, '/home');
-                    // Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(key: UniqueKey())));
+                    // Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/questionnaire');
                   },
                   child: const Text('Login'),
                 ),

@@ -1,6 +1,6 @@
-import 'package:be_ai_mobile/screens/account.dart';
-import 'package:be_ai_mobile/screens/camera.dart';
-import 'package:be_ai_mobile/screens/diary.dart';
+import 'package:be_ai_mobile/screens/inner/account.dart';
+import 'package:be_ai_mobile/screens/inner/camera.dart';
+import 'package:be_ai_mobile/screens/inner/diary.dart';
 import 'package:be_ai_mobile/theme/colors/light_colors.dart';
 import 'package:flutter/material.dart';
 
