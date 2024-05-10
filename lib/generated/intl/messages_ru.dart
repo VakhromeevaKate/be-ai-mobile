@@ -25,21 +25,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "Account": MessageLookupByLibrary.simpleMessage("Профиль"),
         "Activity": MessageLookupByLibrary.simpleMessage("Активность"),
         "Camera": MessageLookupByLibrary.simpleMessage("Камера"),
+        "Carbohydrates": MessageLookupByLibrary.simpleMessage("Углеводы"),
         "Common": MessageLookupByLibrary.simpleMessage("Общее"),
         "CommonQuestions":
             MessageLookupByLibrary.simpleMessage("Общие вопросы"),
         "Continue": MessageLookupByLibrary.simpleMessage("Далее"),
+        "DailyReport": MessageLookupByLibrary.simpleMessage("Отчет за день"),
         "Diary": MessageLookupByLibrary.simpleMessage("Дневник"),
         "EatingHabits":
             MessageLookupByLibrary.simpleMessage("Пищевые привычки"),
         "Email":
             MessageLookupByLibrary.simpleMessage("Адрес электронной почты"),
+        "Fats": MessageLookupByLibrary.simpleMessage("Жиры"),
+        "Fiber": MessageLookupByLibrary.simpleMessage("Клетчатка"),
         "Login": MessageLookupByLibrary.simpleMessage("Войти"),
         "Meal": MessageLookupByLibrary.simpleMessage("Еда"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
         "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "PhysicalActivity":
             MessageLookupByLibrary.simpleMessage("Физческая активность"),
+        "Proteins": MessageLookupByLibrary.simpleMessage("Белки"),
         "Questionnaire": MessageLookupByLibrary.simpleMessage("Анкета"),
         "RepeatPassword":
             MessageLookupByLibrary.simpleMessage("Повторите пароль"),

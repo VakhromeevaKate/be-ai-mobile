@@ -18,5 +18,10 @@
   "Return": "Return",
   "Account": "Account",
   "Diary": "Diary",
-  "Camera": "Camera"
+  "Camera": "Camera",
+  "DailyReport": "Daily report",
+  "Carbohydrates": "Carbohydrates",
+  "Fats": "Fats",
+  "Proteins": "Proteins",
+  "Fiber": "Fiber"
 }

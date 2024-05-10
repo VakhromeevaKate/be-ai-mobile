@@ -249,6 +249,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Daily report`
+  String get DailyReport {
+    return Intl.message(
+      'Daily report',
+      name: 'DailyReport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Carbohydrates`
+  String get Carbohydrates {
+    return Intl.message(
+      'Carbohydrates',
+      name: 'Carbohydrates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fats`
+  String get Fats {
+    return Intl.message(
+      'Fats',
+      name: 'Fats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proteins`
+  String get Proteins {
+    return Intl.message(
+      'Proteins',
+      name: 'Proteins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fiber`
+  String get Fiber {
+    return Intl.message(
+      'Fiber',
+      name: 'Fiber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

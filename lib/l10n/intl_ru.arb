@@ -18,5 +18,10 @@
   "Return": "Назад",
   "Account": "Профиль",
   "Diary": "Дневник",
-  "Camera": "Камера"
+  "Camera": "Камера",
+  "DailyReport": "Отчет за день",
+  "Carbohydrates": "Углеводы",
+  "Fats": "Жиры",
+  "Proteins": "Белки",
+  "Fiber": "Клетчатка"
 }
