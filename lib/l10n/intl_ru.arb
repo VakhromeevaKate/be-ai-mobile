@@ -13,5 +13,7 @@
   "Activity": "Активность",
   "CommonQuestions": "Общие вопросы",
   "EatingHabits": "Пищевые привычки",
-  "PhysicalActivity": "Физческая активность"
+  "PhysicalActivity": "Физческая активность",
+  "Continue": "Далее",
+  "Return": "Назад"
 }

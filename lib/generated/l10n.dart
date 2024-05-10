@@ -199,6 +199,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Continue`
+  String get Continue {
+    return Intl.message(
+      'Continue',
+      name: 'Continue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Return`
+  String get Return {
+    return Intl.message(
+      'Return',
+      name: 'Return',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

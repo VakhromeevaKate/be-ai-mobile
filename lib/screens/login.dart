@@ -81,7 +81,7 @@ class LoginForm extends StatelessWidget {
                     // Navigator.pushNamed(context, '/home');
                     Navigator.pushNamed(context, '/questionnaire');
                   },
-                  child: const Text('Login'),
+                  child: Text(S.of(context).Login),
                 ),
               )
             )

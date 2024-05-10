@@ -13,5 +13,7 @@
   "Activity": "Activity",
   "CommonQuestions": "Common questions",
   "EatingHabits": "Eating habits",
-  "PhysicalActivity": "Physical activity"
+  "PhysicalActivity": "Physical activity",
+  "Continue": "Continue",
+  "Return": "Return"
 }

@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Common": MessageLookupByLibrary.simpleMessage("Common"),
         "CommonQuestions":
             MessageLookupByLibrary.simpleMessage("Common questions"),
+        "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "EatingHabits": MessageLookupByLibrary.simpleMessage("Eating habits"),
         "Email": MessageLookupByLibrary.simpleMessage("Email"),
         "Login": MessageLookupByLibrary.simpleMessage("Login"),
@@ -37,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Questionnaire": MessageLookupByLibrary.simpleMessage("Questionnaire"),
         "RepeatPassword":
             MessageLookupByLibrary.simpleMessage("Repeat password"),
+        "Return": MessageLookupByLibrary.simpleMessage("Return"),
         "SighUp": MessageLookupByLibrary.simpleMessage("Sigh up"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Welcome to be.ai - you intuitive nutrition assistant!"),
