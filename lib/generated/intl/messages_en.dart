@@ -50,6 +50,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "SighUp": MessageLookupByLibrary.simpleMessage("Sigh up"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Welcome to be.ai - you intuitive nutrition assistant!"),
-        "title": MessageLookupByLibrary.simpleMessage("be.ai")
+        "title": MessageLookupByLibrary.simpleMessage("Welcome to be.ai!")
       };
 }

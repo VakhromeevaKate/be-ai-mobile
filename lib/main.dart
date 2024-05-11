@@ -57,8 +57,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(S.of(context).title),
-          leading: const Icon(Icons.fastfood),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(S.of(context).title),
+            ]
+          ),
+          // leading: const Icon(Icons.fastfood),
           backgroundColor: LightColors.kLightGreen,
         ),
         body: Container(

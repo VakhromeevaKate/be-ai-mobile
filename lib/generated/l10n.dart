@@ -50,10 +50,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `be.ai`
+  /// `Welcome to be.ai!`
   String get title {
     return Intl.message(
-      'be.ai',
+      'Welcome to be.ai!',
       name: 'title',
       desc: '',
       args: [],
