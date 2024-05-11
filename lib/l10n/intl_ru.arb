@@ -67,5 +67,45 @@
   "Yoga": "Йога",
   "Pilates": "Пилатес",
   "HowOftenDoYouDoStrengthExercises": "Как часто вы выполняете силовые упражнения?",
-  "DoYouHaveAnyRestrictionsForPlayingSports": "У вас есть какие либо ограничения для занятий спортом?"
+  "DoYouHaveAnyRestrictionsForPlayingSports": "У вас есть какие либо ограничения для занятий спортом?",
+  "HowOftenDoYouSkipBreakfastInAWeek": "Как часто вы пропускаете завтрак за неделю?",
+  "HowOftenDoYouDrinkSugaryDrinks": "Как часто вы пьете сладкие напитки (газировки, сладкий чай, сладкий кофе)",
+  "OneTimePerWeekOrLess": "1 раз в неделю или меньше",
+  "NTimesPerWeek": "{interval} раз в неделю",
+  "@NTimesPerWeek": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "10"
+      }
+    }
+  },
+  "MoreThanNTimesPerWeek": "{n}+ раз в неделю",
+  "HowManyCupsOfWaterDoYouDrinkPerDay": "Сколько кружек воды вы выпиваете в день?",
+  "OnePerDayOrLess": "1 в день или меньше",
+  "NPerDay": "{interval} в день",
+  "@NPerDay": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "10-12"
+      }
+    }
+  },
+  "MoreThanNPerDay": "{n}+ в день",
+  "HowOftenDoYouEatFastFoodOrEatOut": "Как часто вы едите фастфуд или едите вне дома?",
+  "OnePerMonth": "1 раз в месяц",
+  "NPerMonth": "{interval} раз в месяц",
+  "@NPerMonth": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "10-12"
+      }
+    }
+  },
+  "HowOftenDoYouDrinkAlcohol": "Как часто вы пьете алкоголь?"
 }

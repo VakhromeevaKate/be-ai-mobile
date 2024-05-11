@@ -22,7 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(n) => "Больше ${n} минут в неделю";
 
-  static String m1(interval) => "${interval} минут в неделю";
+  static String m1(n) => "${n}+ в день";
+
+  static String m2(n) => "${n}+ раз в неделю";
+
+  static String m3(interval) => "${interval} минут в неделю";
+
+  static String m4(interval) => "${interval} в день";
+
+  static String m5(interval) => "${interval} раз в месяц";
+
+  static String m6(interval) => "${interval} раз в неделю";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -60,19 +70,42 @@ class MessageLookup extends MessageLookupByLibrary {
             "Тренировки со свободным весом"),
         "GlutenIntolerance":
             MessageLookupByLibrary.simpleMessage("Непереносимость глютена"),
+        "HowManyCupsOfWaterDoYouDrinkPerDay":
+            MessageLookupByLibrary.simpleMessage(
+                "Сколько кружек воды вы выпиваете в день?"),
         "HowOftenDoYouDoAerobicExercises": MessageLookupByLibrary.simpleMessage(
             "Как часто вы выполняете аэробные упражнения?"),
         "HowOftenDoYouDoStrengthExercises":
             MessageLookupByLibrary.simpleMessage(
                 "Как часто вы выполняете силовые упражнения?"),
+        "HowOftenDoYouDrinkAlcohol": MessageLookupByLibrary.simpleMessage(
+            "Как часто вы пьете алкоголь?"),
+        "HowOftenDoYouDrinkSugaryDrinks": MessageLookupByLibrary.simpleMessage(
+            "Как часто вы пьете сладкие напитки (газировки, сладкий чай, сладкий кофе)"),
+        "HowOftenDoYouEatFastFoodOrEatOut":
+            MessageLookupByLibrary.simpleMessage(
+                "Как часто вы едите фастфуд или едите вне дома?"),
+        "HowOftenDoYouSkipBreakfastInAWeek":
+            MessageLookupByLibrary.simpleMessage(
+                "Как часто вы пропускаете завтрак за неделю?"),
         "IAmNotDoingIt": MessageLookupByLibrary.simpleMessage("Не выполняю"),
         "Login": MessageLookupByLibrary.simpleMessage("Войти"),
         "Male": MessageLookupByLibrary.simpleMessage("Мужчина"),
         "Meal": MessageLookupByLibrary.simpleMessage("Еда"),
         "MoreThanNMinutesPerWeek": m0,
-        "NMinutesPerWeek": m1,
+        "MoreThanNPerDay": m1,
+        "MoreThanNTimesPerWeek": m2,
+        "NMinutesPerWeek": m3,
+        "NPerDay": m4,
+        "NPerMonth": m5,
+        "NTimesPerWeek": m6,
         "No": MessageLookupByLibrary.simpleMessage("Нет"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
+        "OnePerDayOrLess":
+            MessageLookupByLibrary.simpleMessage("1 в день или меньше"),
+        "OnePerMonth": MessageLookupByLibrary.simpleMessage("1 раз в месяц"),
+        "OneTimePerWeekOrLess":
+            MessageLookupByLibrary.simpleMessage("1 раз в неделю или меньше"),
         "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "PhysicalActivity":
             MessageLookupByLibrary.simpleMessage("Физческая активность"),

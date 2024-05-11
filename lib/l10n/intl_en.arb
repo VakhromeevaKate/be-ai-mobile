@@ -66,5 +66,45 @@
   "Yoga": "Yoga",
   "Pilates": "Pilates",
   "HowOftenDoYouDoStrengthExercises": "How often do you do strength exercises?",
-  "DoYouHaveAnyRestrictionsForPlayingSports": "Do you have any restrictions for playing sports?"
+  "DoYouHaveAnyRestrictionsForPlayingSports": "Do you have any restrictions for playing sports?",
+  "HowOftenDoYouSkipBreakfastInAWeek": "How often do you skip breakfast in a week?",
+  "HowOftenDoYouDrinkSugaryDrinks": "How often do you drink sugary drinks (sodas, sweet tea, sweet coffee)",
+  "OneTimePerWeekOrLess": "One time per week or less",
+  "NTimesPerWeek": "{interval} times per week",
+  "@NTimesPerWeek": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "10"
+      }
+    }
+  },
+  "MoreThanNTimesPerWeek": "{n}+ times per week",
+  "HowManyCupsOfWaterDoYouDrinkPerDay": "How many cups of water do you drink per day",
+  "OnePerDayOrLess": "1 per day or less",
+  "NPerDay": "{interval} per day",
+  "@NPerDay": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "10-12"
+      }
+    }
+  },
+  "MoreThanNPerDay": "{n}+ per day",
+  "HowOftenDoYouEatFastFoodOrEatOut": "How often do you eat fast-food or eat out?",
+  "OnePerMonth": "1 time per month",
+  "NPerMonth": "{interval} times per month",
+  "@NPerMonth": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "10-12"
+      }
+    }
+  },
+  "HowOftenDoYouDrinkAlcohol": "How often do you drink alcohol?"
 }

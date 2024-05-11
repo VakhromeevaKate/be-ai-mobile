@@ -32,7 +32,12 @@ class EatingHabits extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).YourSex),
+                                Text(S.of(context).HowOftenDoYouSkipBreakfastInAWeek),
+                              ],
+                            ),
+                            const Row(
+                              children: [
+                                Text('1-7'),
                               ],
                             ),
                           ],
@@ -49,7 +54,29 @@ class EatingHabits extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).YourAge),
+                                Flexible( child:
+                                    Text(S.of(context).HowOftenDoYouDrinkSugaryDrinks),
+                                )
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).OneTimePerWeekOrLess),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NTimesPerWeek("2-4")),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NTimesPerWeek("5-10")),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).MoreThanNTimesPerWeek(11)),
                               ],
                             ),
                           ],
@@ -66,7 +93,27 @@ class EatingHabits extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).YourHeight),
+                                Text(S.of(context).HowManyCupsOfWaterDoYouDrinkPerDay),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).OnePerDayOrLess),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NPerDay("2-4")),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NPerDay("5-8")),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).MoreThanNPerDay(9)),
                               ],
                             ),
                           ],
@@ -83,7 +130,32 @@ class EatingHabits extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).YourWeight),
+                                Text(S.of(context).HowOftenDoYouEatFastFoodOrEatOut),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).OnePerMonth),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NPerMonth('2-3')),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NTimesPerWeek('1-2')),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).NTimesPerWeek('3-4')),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Text(S.of(context).MoreThanNTimesPerWeek(5)),
                               ],
                             ),
                           ],
@@ -100,54 +172,32 @@ class EatingHabits extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).YourDesiredWeight),
-                              ],
-                            ),
-                          ],
-                        )
-                    ),
-                    Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: LightColors.kLightGreen,
-                        ),
-                        margin: const EdgeInsets.symmetric(vertical: 16),
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text(S.of(context).DoYouHaveDiseases),
+                                Text(S.of(context).HowOftenDoYouDrinkAlcohol),
                               ],
                             ),
                             Row(
                               children: [
-                                Text(S.of(context).DiabetesMellitus),
+                                Text(S.of(context).OnePerMonth),
                               ],
                             ),
                             Row(
                               children: [
-                                Text(S.of(context).Atherosclerosis),
+                                Text(S.of(context).NPerMonth('2-3')),
                               ],
                             ),
                             Row(
                               children: [
-                                Text(S.of(context).PolycysticOvarySyndrome),
+                                Text(S.of(context).NTimesPerWeek('1-2')),
                               ],
                             ),
                             Row(
                               children: [
-                                Text(S.of(context).ThyroidDisease),
+                                Text(S.of(context).NTimesPerWeek('3-4')),
                               ],
                             ),
                             Row(
                               children: [
-                                Text(S.of(context).GlutenIntolerance),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text(S.of(context).AnyOther),
+                                Text(S.of(context).MoreThanNTimesPerWeek(5)),
                               ],
                             ),
                           ],

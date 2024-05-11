@@ -639,6 +639,136 @@ class S {
       args: [],
     );
   }
+
+  /// `How often do you skip breakfast in a week?`
+  String get HowOftenDoYouSkipBreakfastInAWeek {
+    return Intl.message(
+      'How often do you skip breakfast in a week?',
+      name: 'HowOftenDoYouSkipBreakfastInAWeek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How often do you drink sugary drinks (sodas, sweet tea, sweet coffee)`
+  String get HowOftenDoYouDrinkSugaryDrinks {
+    return Intl.message(
+      'How often do you drink sugary drinks (sodas, sweet tea, sweet coffee)',
+      name: 'HowOftenDoYouDrinkSugaryDrinks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `One time per week or less`
+  String get OneTimePerWeekOrLess {
+    return Intl.message(
+      'One time per week or less',
+      name: 'OneTimePerWeekOrLess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{interval} times per week`
+  String NTimesPerWeek(String interval) {
+    return Intl.message(
+      '$interval times per week',
+      name: 'NTimesPerWeek',
+      desc: 'A message with a single parameter',
+      args: [interval],
+    );
+  }
+
+  /// `{n}+ times per week`
+  String MoreThanNTimesPerWeek(Object n) {
+    return Intl.message(
+      '$n+ times per week',
+      name: 'MoreThanNTimesPerWeek',
+      desc: '',
+      args: [n],
+    );
+  }
+
+  /// `How many cups of water do you drink per day`
+  String get HowManyCupsOfWaterDoYouDrinkPerDay {
+    return Intl.message(
+      'How many cups of water do you drink per day',
+      name: 'HowManyCupsOfWaterDoYouDrinkPerDay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 per day or less`
+  String get OnePerDayOrLess {
+    return Intl.message(
+      '1 per day or less',
+      name: 'OnePerDayOrLess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{interval} per day`
+  String NPerDay(String interval) {
+    return Intl.message(
+      '$interval per day',
+      name: 'NPerDay',
+      desc: 'A message with a single parameter',
+      args: [interval],
+    );
+  }
+
+  /// `{n}+ per day`
+  String MoreThanNPerDay(Object n) {
+    return Intl.message(
+      '$n+ per day',
+      name: 'MoreThanNPerDay',
+      desc: '',
+      args: [n],
+    );
+  }
+
+  /// `How often do you eat fast-food or eat out?`
+  String get HowOftenDoYouEatFastFoodOrEatOut {
+    return Intl.message(
+      'How often do you eat fast-food or eat out?',
+      name: 'HowOftenDoYouEatFastFoodOrEatOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 time per month`
+  String get OnePerMonth {
+    return Intl.message(
+      '1 time per month',
+      name: 'OnePerMonth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{interval} times per month`
+  String NPerMonth(String interval) {
+    return Intl.message(
+      '$interval times per month',
+      name: 'NPerMonth',
+      desc: 'A message with a single parameter',
+      args: [interval],
+    );
+  }
+
+  /// `How often do you drink alcohol?`
+  String get HowOftenDoYouDrinkAlcohol {
+    return Intl.message(
+      'How often do you drink alcohol?',
+      name: 'HowOftenDoYouDrinkAlcohol',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
