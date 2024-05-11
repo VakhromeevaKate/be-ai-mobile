@@ -20,13 +20,15 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
+  static String m0(n) => "Больше ${n} минут в неделю";
+
+  static String m1(interval) => "${interval} минут в неделю";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Account": MessageLookupByLibrary.simpleMessage("Профиль"),
         "Activity": MessageLookupByLibrary.simpleMessage("Активность"),
         "AnyOther": MessageLookupByLibrary.simpleMessage("Другое (вписать)"),
-        "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
-            "Вы принимаете какие-либо препараты?"),
         "Atherosclerosis": MessageLookupByLibrary.simpleMessage("Атеросклероз"),
         "Camera": MessageLookupByLibrary.simpleMessage("Камера"),
         "Carbohydrates": MessageLookupByLibrary.simpleMessage("Углеводы"),
@@ -34,12 +36,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "CommonQuestions":
             MessageLookupByLibrary.simpleMessage("Общие вопросы"),
         "Continue": MessageLookupByLibrary.simpleMessage("Далее"),
+        "Cycling": MessageLookupByLibrary.simpleMessage("Велосипед"),
         "DailyReport": MessageLookupByLibrary.simpleMessage("Отчет за день"),
         "DiabetesMellitus":
             MessageLookupByLibrary.simpleMessage("Сахарный диабет"),
         "Diary": MessageLookupByLibrary.simpleMessage("Дневник"),
+        "DoYouHaveAnyRestrictionsForPlayingSports":
+            MessageLookupByLibrary.simpleMessage(
+                "У вас есть какие либо ограничения для занятий спортом?"),
         "DoYouHaveDiseases": MessageLookupByLibrary.simpleMessage(
             "Есть ли у вас какие-либо из нижеперечисленных заболеваний?"),
+        "DoYouPlaySports":
+            MessageLookupByLibrary.simpleMessage("Вы занимаетесь спортом"),
         "EatingHabits":
             MessageLookupByLibrary.simpleMessage("Пищевые привычки"),
         "Email":
@@ -47,15 +55,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "Fats": MessageLookupByLibrary.simpleMessage("Жиры"),
         "Female": MessageLookupByLibrary.simpleMessage("Женщина"),
         "Fiber": MessageLookupByLibrary.simpleMessage("Клетчатка"),
+        "Fitness": MessageLookupByLibrary.simpleMessage("Фитнес"),
+        "FreeWeightTraining": MessageLookupByLibrary.simpleMessage(
+            "Тренировки со свободным весом"),
         "GlutenIntolerance":
             MessageLookupByLibrary.simpleMessage("Непереносимость глютена"),
+        "HowOftenDoYouDoAerobicExercises": MessageLookupByLibrary.simpleMessage(
+            "Как часто вы выполняете аэробные упражнения?"),
+        "HowOftenDoYouDoStrengthExercises":
+            MessageLookupByLibrary.simpleMessage(
+                "Как часто вы выполняете силовые упражнения?"),
+        "IAmNotDoingIt": MessageLookupByLibrary.simpleMessage("Не выполняю"),
         "Login": MessageLookupByLibrary.simpleMessage("Войти"),
         "Male": MessageLookupByLibrary.simpleMessage("Мужчина"),
         "Meal": MessageLookupByLibrary.simpleMessage("Еда"),
+        "MoreThanNMinutesPerWeek": m0,
+        "NMinutesPerWeek": m1,
+        "No": MessageLookupByLibrary.simpleMessage("Нет"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
         "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "PhysicalActivity":
             MessageLookupByLibrary.simpleMessage("Физческая активность"),
+        "Pilates": MessageLookupByLibrary.simpleMessage("Пилатес"),
         "PolycysticOvarySyndrome": MessageLookupByLibrary.simpleMessage(
             "Синдром поликистозных яичников"),
         "Proteins": MessageLookupByLibrary.simpleMessage("Белки"),
@@ -63,11 +84,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "RepeatPassword":
             MessageLookupByLibrary.simpleMessage("Повторите пароль"),
         "Return": MessageLookupByLibrary.simpleMessage("Назад"),
+        "Running": MessageLookupByLibrary.simpleMessage("Бег"),
         "SighUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "Swimming": MessageLookupByLibrary.simpleMessage("Плавание"),
         "ThyroidDisease": MessageLookupByLibrary.simpleMessage(
             "Заболевания щитовидной железы"),
+        "TrainingSimulators":
+            MessageLookupByLibrary.simpleMessage("Тренировки в тренажерах"),
+        "Walking": MessageLookupByLibrary.simpleMessage("Ходьба"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Добро пожаловать в be.ai! - Ваш помощник по интуитивному правильному питанию"),
+        "WhatAerobicExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(
+            "Какие аэробные упражнения вы выполняете?"),
+        "WhatStrengthExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(
+            "Какие силовые упражнения вы выполняете?"),
+        "Yes": MessageLookupByLibrary.simpleMessage("Да"),
+        "Yoga": MessageLookupByLibrary.simpleMessage("Йога"),
         "YourAge": MessageLookupByLibrary.simpleMessage("Ваш возраст"),
         "YourDesiredWeight":
             MessageLookupByLibrary.simpleMessage("Ваш желаемый вес"),

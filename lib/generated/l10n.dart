@@ -440,11 +440,201 @@ class S {
     );
   }
 
-  /// `Are you taking any medications?`
-  String get AreYouTakingMedications {
+  /// `Do you play sports`
+  String get DoYouPlaySports {
     return Intl.message(
-      'Are you taking any medications?',
-      name: 'AreYouTakingMedications',
+      'Do you play sports',
+      name: 'DoYouPlaySports',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get Yes {
+    return Intl.message(
+      'Yes',
+      name: 'Yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get No {
+    return Intl.message(
+      'No',
+      name: 'No',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What aerobic exercises do you do?`
+  String get WhatAerobicExercisesDoYouDo {
+    return Intl.message(
+      'What aerobic exercises do you do?',
+      name: 'WhatAerobicExercisesDoYouDo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Walking`
+  String get Walking {
+    return Intl.message(
+      'Walking',
+      name: 'Walking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Running`
+  String get Running {
+    return Intl.message(
+      'Running',
+      name: 'Running',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cycling`
+  String get Cycling {
+    return Intl.message(
+      'Cycling',
+      name: 'Cycling',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Swimming`
+  String get Swimming {
+    return Intl.message(
+      'Swimming',
+      name: 'Swimming',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fitness`
+  String get Fitness {
+    return Intl.message(
+      'Fitness',
+      name: 'Fitness',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I am not doing it`
+  String get IAmNotDoingIt {
+    return Intl.message(
+      'I am not doing it',
+      name: 'IAmNotDoingIt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How often do you do aerobic exercises?`
+  String get HowOftenDoYouDoAerobicExercises {
+    return Intl.message(
+      'How often do you do aerobic exercises?',
+      name: 'HowOftenDoYouDoAerobicExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{interval} minutes per week`
+  String NMinutesPerWeek(String interval) {
+    return Intl.message(
+      '$interval minutes per week',
+      name: 'NMinutesPerWeek',
+      desc: 'A message with a single parameter',
+      args: [interval],
+    );
+  }
+
+  /// `More than {n} minutes per week`
+  String MoreThanNMinutesPerWeek(Object n) {
+    return Intl.message(
+      'More than $n minutes per week',
+      name: 'MoreThanNMinutesPerWeek',
+      desc: '',
+      args: [n],
+    );
+  }
+
+  /// `What strength exercises do you do?`
+  String get WhatStrengthExercisesDoYouDo {
+    return Intl.message(
+      'What strength exercises do you do?',
+      name: 'WhatStrengthExercisesDoYouDo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free weight training`
+  String get FreeWeightTraining {
+    return Intl.message(
+      'Free weight training',
+      name: 'FreeWeightTraining',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Training simulators`
+  String get TrainingSimulators {
+    return Intl.message(
+      'Training simulators',
+      name: 'TrainingSimulators',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yoga`
+  String get Yoga {
+    return Intl.message(
+      'Yoga',
+      name: 'Yoga',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pilates`
+  String get Pilates {
+    return Intl.message(
+      'Pilates',
+      name: 'Pilates',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How often do you do strength exercises?`
+  String get HowOftenDoYouDoStrengthExercises {
+    return Intl.message(
+      'How often do you do strength exercises?',
+      name: 'HowOftenDoYouDoStrengthExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have any restrictions for playing sports?`
+  String get DoYouHaveAnyRestrictionsForPlayingSports {
+    return Intl.message(
+      'Do you have any restrictions for playing sports?',
+      name: 'DoYouHaveAnyRestrictionsForPlayingSports',
       desc: '',
       args: [],
     );

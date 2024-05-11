@@ -38,5 +38,34 @@
   "ThyroidDisease": "Заболевания щитовидной железы",
   "GlutenIntolerance": "Непереносимость глютена",
   "AnyOther": "Другое (вписать)",
-  "AreYouTakingMedications": "Вы принимаете какие-либо препараты?"
+  "AreYouTakingMedications": "Вы принимаете какие-либо препараты?",
+  "DoYouPlaySports": "Вы занимаетесь спортом",
+  "Yes": "Да",
+  "No": "Нет",
+  "WhatAerobicExercisesDoYouDo": "Какие аэробные упражнения вы выполняете?",
+  "Walking": "Ходьба",
+  "Running": "Бег",
+  "Cycling": "Велосипед",
+  "Swimming": "Плавание",
+  "Fitness": "Фитнес",
+  "IAmNotDoingIt": "Не выполняю",
+  "HowOftenDoYouDoAerobicExercises": "Как часто вы выполняете аэробные упражнения?",
+  "NMinutesPerWeek": "{interval} минут в неделю",
+  "@NMinutesPerWeek": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "120-200"
+      }
+    }
+  },
+  "MoreThanNMinutesPerWeek": "Больше {n} минут в неделю",
+  "WhatStrengthExercisesDoYouDo": "Какие силовые упражнения вы выполняете?",
+  "FreeWeightTraining": "Тренировки со свободным весом",
+  "TrainingSimulators": "Тренировки в тренажерах",
+  "Yoga": "Йога",
+  "Pilates": "Пилатес",
+  "HowOftenDoYouDoStrengthExercises": "Как часто вы выполняете силовые упражнения?",
+  "DoYouHaveAnyRestrictionsForPlayingSports": "У вас есть какие либо ограничения для занятий спортом?"
 }

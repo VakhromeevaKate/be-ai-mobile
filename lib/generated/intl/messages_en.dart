@@ -20,13 +20,15 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
+  static String m0(n) => "More than ${n} minutes per week";
+
+  static String m1(interval) => "${interval} minutes per week";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Account": MessageLookupByLibrary.simpleMessage("Account"),
         "Activity": MessageLookupByLibrary.simpleMessage("Activity"),
         "AnyOther": MessageLookupByLibrary.simpleMessage("Any other (enter)"),
-        "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
-            "Are you taking any medications?"),
         "Atherosclerosis":
             MessageLookupByLibrary.simpleMessage("Atherosclerosis"),
         "Camera": MessageLookupByLibrary.simpleMessage("Camera"),
@@ -35,26 +37,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "CommonQuestions":
             MessageLookupByLibrary.simpleMessage("Common questions"),
         "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
+        "Cycling": MessageLookupByLibrary.simpleMessage("Cycling"),
         "DailyReport": MessageLookupByLibrary.simpleMessage("Daily report"),
         "DiabetesMellitus":
             MessageLookupByLibrary.simpleMessage("Diabetes mellitus"),
         "Diary": MessageLookupByLibrary.simpleMessage("Diary"),
+        "DoYouHaveAnyRestrictionsForPlayingSports":
+            MessageLookupByLibrary.simpleMessage(
+                "Do you have any restrictions for playing sports?"),
         "DoYouHaveDiseases": MessageLookupByLibrary.simpleMessage(
             "Do you have any of the following diseases?"),
+        "DoYouPlaySports":
+            MessageLookupByLibrary.simpleMessage("Do you play sports"),
         "EatingHabits": MessageLookupByLibrary.simpleMessage("Eating habits"),
         "Email": MessageLookupByLibrary.simpleMessage("Email"),
         "Fats": MessageLookupByLibrary.simpleMessage("Fats"),
         "Female": MessageLookupByLibrary.simpleMessage("Female"),
         "Fiber": MessageLookupByLibrary.simpleMessage("Fiber"),
+        "Fitness": MessageLookupByLibrary.simpleMessage("Fitness"),
+        "FreeWeightTraining":
+            MessageLookupByLibrary.simpleMessage("Free weight training"),
         "GlutenIntolerance":
             MessageLookupByLibrary.simpleMessage("Gluten intolerance"),
+        "HowOftenDoYouDoAerobicExercises": MessageLookupByLibrary.simpleMessage(
+            "How often do you do aerobic exercises?"),
+        "HowOftenDoYouDoStrengthExercises":
+            MessageLookupByLibrary.simpleMessage(
+                "How often do you do strength exercises?"),
+        "IAmNotDoingIt":
+            MessageLookupByLibrary.simpleMessage("I am not doing it"),
         "Login": MessageLookupByLibrary.simpleMessage("Login"),
         "Male": MessageLookupByLibrary.simpleMessage("Male"),
         "Meal": MessageLookupByLibrary.simpleMessage("Meal"),
+        "MoreThanNMinutesPerWeek": m0,
+        "NMinutesPerWeek": m1,
+        "No": MessageLookupByLibrary.simpleMessage("No"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("No account?"),
         "Password": MessageLookupByLibrary.simpleMessage("Password"),
         "PhysicalActivity":
             MessageLookupByLibrary.simpleMessage("Physical activity"),
+        "Pilates": MessageLookupByLibrary.simpleMessage("Pilates"),
         "PolycysticOvarySyndrome":
             MessageLookupByLibrary.simpleMessage("Polycystic ovary syndrome"),
         "Proteins": MessageLookupByLibrary.simpleMessage("Proteins"),
@@ -62,11 +84,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "RepeatPassword":
             MessageLookupByLibrary.simpleMessage("Repeat password"),
         "Return": MessageLookupByLibrary.simpleMessage("Return"),
+        "Running": MessageLookupByLibrary.simpleMessage("Running"),
         "SighUp": MessageLookupByLibrary.simpleMessage("Sigh up"),
+        "Swimming": MessageLookupByLibrary.simpleMessage("Swimming"),
         "ThyroidDisease":
             MessageLookupByLibrary.simpleMessage("Thyroid disease"),
+        "TrainingSimulators":
+            MessageLookupByLibrary.simpleMessage("Training simulators"),
+        "Walking": MessageLookupByLibrary.simpleMessage("Walking"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Welcome to be.ai - you intuitive nutrition assistant!"),
+        "WhatAerobicExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(
+            "What aerobic exercises do you do?"),
+        "WhatStrengthExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(
+            "What strength exercises do you do?"),
+        "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
+        "Yoga": MessageLookupByLibrary.simpleMessage("Yoga"),
         "YourAge": MessageLookupByLibrary.simpleMessage("Your age"),
         "YourDesiredWeight":
             MessageLookupByLibrary.simpleMessage("Your desired weight"),

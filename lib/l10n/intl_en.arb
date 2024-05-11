@@ -38,5 +38,33 @@
   "ThyroidDisease": "Thyroid disease",
   "GlutenIntolerance": "Gluten intolerance",
   "AnyOther": "Any other (enter)",
-  "AreYouTakingMedications": "Are you taking any medications?"
+  "DoYouPlaySports": "Do you play sports",
+  "Yes": "Yes",
+  "No": "No",
+  "WhatAerobicExercisesDoYouDo": "What aerobic exercises do you do?",
+  "Walking": "Walking",
+  "Running": "Running",
+  "Cycling": "Cycling",
+  "Swimming": "Swimming",
+  "Fitness": "Fitness",
+  "IAmNotDoingIt": "I am not doing it",
+  "HowOftenDoYouDoAerobicExercises": "How often do you do aerobic exercises?",
+  "NMinutesPerWeek": "{interval} minutes per week",
+  "@NMinutesPerWeek": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "interval": {
+        "type": "String",
+        "example": "120-200"
+      }
+    }
+  },
+  "MoreThanNMinutesPerWeek": "More than {n} minutes per week",
+  "WhatStrengthExercisesDoYouDo": "What strength exercises do you do?",
+  "FreeWeightTraining": "Free weight training",
+  "TrainingSimulators": "Training simulators",
+  "Yoga": "Yoga",
+  "Pilates": "Pilates",
+  "HowOftenDoYouDoStrengthExercises": "How often do you do strength exercises?",
+  "DoYouHaveAnyRestrictionsForPlayingSports": "Do you have any restrictions for playing sports?"
 }
