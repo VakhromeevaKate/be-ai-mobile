@@ -23,5 +23,20 @@
   "Carbohydrates": "Углеводы",
   "Fats": "Жиры",
   "Proteins": "Белки",
-  "Fiber": "Клетчатка"
+  "Fiber": "Клетчатка",
+  "YourSex": "Ваш пол",
+  "Male": "Мужчина",
+  "Female": "Женщина",
+  "YourAge": "Ваш возраст",
+  "YourHeight": "Ваш рост",
+  "YourWeight": "Ваш текущий вес",
+  "YourDesiredWeight": "Ваш желаемый вес",
+  "DoYouHaveDiseases": "Есть ли у вас какие-либо из нижеперечисленных заболеваний?",
+  "DiabetesMellitus": "Сахарный диабет",
+  "Atherosclerosis": "Атеросклероз",
+  "PolycysticOvarySyndrome": "Синдром поликистозных яичников",
+  "ThyroidDisease": "Заболевания щитовидной железы",
+  "GlutenIntolerance": "Непереносимость глютена",
+  "AnyOther": "Другое (вписать)",
+  "AreYouTakingMedications": "Вы принимаете какие-либо препараты?"
 }

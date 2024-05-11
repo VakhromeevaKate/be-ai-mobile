@@ -299,6 +299,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Your sex`
+  String get YourSex {
+    return Intl.message(
+      'Your sex',
+      name: 'YourSex',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get Male {
+    return Intl.message(
+      'Male',
+      name: 'Male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get Female {
+    return Intl.message(
+      'Female',
+      name: 'Female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your age`
+  String get YourAge {
+    return Intl.message(
+      'Your age',
+      name: 'YourAge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your height`
+  String get YourHeight {
+    return Intl.message(
+      'Your height',
+      name: 'YourHeight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your weight`
+  String get YourWeight {
+    return Intl.message(
+      'Your weight',
+      name: 'YourWeight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your desired weight`
+  String get YourDesiredWeight {
+    return Intl.message(
+      'Your desired weight',
+      name: 'YourDesiredWeight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have any of the following diseases?`
+  String get DoYouHaveDiseases {
+    return Intl.message(
+      'Do you have any of the following diseases?',
+      name: 'DoYouHaveDiseases',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diabetes mellitus`
+  String get DiabetesMellitus {
+    return Intl.message(
+      'Diabetes mellitus',
+      name: 'DiabetesMellitus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Atherosclerosis`
+  String get Atherosclerosis {
+    return Intl.message(
+      'Atherosclerosis',
+      name: 'Atherosclerosis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Polycystic ovary syndrome`
+  String get PolycysticOvarySyndrome {
+    return Intl.message(
+      'Polycystic ovary syndrome',
+      name: 'PolycysticOvarySyndrome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thyroid disease`
+  String get ThyroidDisease {
+    return Intl.message(
+      'Thyroid disease',
+      name: 'ThyroidDisease',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gluten intolerance`
+  String get GlutenIntolerance {
+    return Intl.message(
+      'Gluten intolerance',
+      name: 'GlutenIntolerance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Any other (enter)`
+  String get AnyOther {
+    return Intl.message(
+      'Any other (enter)',
+      name: 'AnyOther',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you taking any medications?`
+  String get AreYouTakingMedications {
+    return Intl.message(
+      'Are you taking any medications?',
+      name: 'AreYouTakingMedications',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

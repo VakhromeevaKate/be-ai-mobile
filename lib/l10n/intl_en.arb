@@ -23,5 +23,20 @@
   "Carbohydrates": "Carbohydrates",
   "Fats": "Fats",
   "Proteins": "Proteins",
-  "Fiber": "Fiber"
+  "Fiber": "Fiber",
+  "YourSex": "Your sex",
+  "Male": "Male",
+  "Female": "Female",
+  "YourAge": "Your age",
+  "YourHeight": "Your height",
+  "YourWeight": "Your weight",
+  "YourDesiredWeight": "Your desired weight",
+  "DoYouHaveDiseases": "Do you have any of the following diseases?",
+  "DiabetesMellitus": "Diabetes mellitus",
+  "Atherosclerosis": "Atherosclerosis",
+  "PolycysticOvarySyndrome": "Polycystic ovary syndrome",
+  "ThyroidDisease": "Thyroid disease",
+  "GlutenIntolerance": "Gluten intolerance",
+  "AnyOther": "Any other (enter)",
+  "AreYouTakingMedications": "Are you taking any medications?"
 }

@@ -9,9 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:localstorage/localstorage.dart';
 import 'firebase_options.dart';
 import './screens/login.dart';
 import 'generated/l10n.dart';
+
+late final ValueNotifier<int> notifier;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +22,8 @@ Future<void> main() async {
   final firstCamera = cameras.first;
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await initLocalStorage();
+
   runApp(MaterialApp(
     localizationsDelegates: const [
       S.delegate,

@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Account": MessageLookupByLibrary.simpleMessage("Профиль"),
         "Activity": MessageLookupByLibrary.simpleMessage("Активность"),
+        "AnyOther": MessageLookupByLibrary.simpleMessage("Другое (вписать)"),
+        "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
+            "Вы принимаете какие-либо препараты?"),
+        "Atherosclerosis": MessageLookupByLibrary.simpleMessage("Атеросклероз"),
         "Camera": MessageLookupByLibrary.simpleMessage("Камера"),
         "Carbohydrates": MessageLookupByLibrary.simpleMessage("Углеводы"),
         "Common": MessageLookupByLibrary.simpleMessage("Общее"),
@@ -31,27 +35,45 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Общие вопросы"),
         "Continue": MessageLookupByLibrary.simpleMessage("Далее"),
         "DailyReport": MessageLookupByLibrary.simpleMessage("Отчет за день"),
+        "DiabetesMellitus":
+            MessageLookupByLibrary.simpleMessage("Сахарный диабет"),
         "Diary": MessageLookupByLibrary.simpleMessage("Дневник"),
+        "DoYouHaveDiseases": MessageLookupByLibrary.simpleMessage(
+            "Есть ли у вас какие-либо из нижеперечисленных заболеваний?"),
         "EatingHabits":
             MessageLookupByLibrary.simpleMessage("Пищевые привычки"),
         "Email":
             MessageLookupByLibrary.simpleMessage("Адрес электронной почты"),
         "Fats": MessageLookupByLibrary.simpleMessage("Жиры"),
+        "Female": MessageLookupByLibrary.simpleMessage("Женщина"),
         "Fiber": MessageLookupByLibrary.simpleMessage("Клетчатка"),
+        "GlutenIntolerance":
+            MessageLookupByLibrary.simpleMessage("Непереносимость глютена"),
         "Login": MessageLookupByLibrary.simpleMessage("Войти"),
+        "Male": MessageLookupByLibrary.simpleMessage("Мужчина"),
         "Meal": MessageLookupByLibrary.simpleMessage("Еда"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
         "Password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "PhysicalActivity":
             MessageLookupByLibrary.simpleMessage("Физческая активность"),
+        "PolycysticOvarySyndrome": MessageLookupByLibrary.simpleMessage(
+            "Синдром поликистозных яичников"),
         "Proteins": MessageLookupByLibrary.simpleMessage("Белки"),
         "Questionnaire": MessageLookupByLibrary.simpleMessage("Анкета"),
         "RepeatPassword":
             MessageLookupByLibrary.simpleMessage("Повторите пароль"),
         "Return": MessageLookupByLibrary.simpleMessage("Назад"),
         "SighUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "ThyroidDisease": MessageLookupByLibrary.simpleMessage(
+            "Заболевания щитовидной железы"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Добро пожаловать в be.ai! - Ваш помощник по интуитивному правильному питанию"),
+        "YourAge": MessageLookupByLibrary.simpleMessage("Ваш возраст"),
+        "YourDesiredWeight":
+            MessageLookupByLibrary.simpleMessage("Ваш желаемый вес"),
+        "YourHeight": MessageLookupByLibrary.simpleMessage("Ваш рост"),
+        "YourSex": MessageLookupByLibrary.simpleMessage("Ваш пол"),
+        "YourWeight": MessageLookupByLibrary.simpleMessage("Ваш текущий вес"),
         "title":
             MessageLookupByLibrary.simpleMessage("Добро пожаловать в be.ai!")
       };

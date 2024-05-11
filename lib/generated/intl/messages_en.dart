@@ -24,6 +24,11 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Account": MessageLookupByLibrary.simpleMessage("Account"),
         "Activity": MessageLookupByLibrary.simpleMessage("Activity"),
+        "AnyOther": MessageLookupByLibrary.simpleMessage("Any other (enter)"),
+        "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
+            "Are you taking any medications?"),
+        "Atherosclerosis":
+            MessageLookupByLibrary.simpleMessage("Atherosclerosis"),
         "Camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "Carbohydrates": MessageLookupByLibrary.simpleMessage("Carbohydrates"),
         "Common": MessageLookupByLibrary.simpleMessage("Common"),
@@ -31,25 +36,43 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Common questions"),
         "Continue": MessageLookupByLibrary.simpleMessage("Continue"),
         "DailyReport": MessageLookupByLibrary.simpleMessage("Daily report"),
+        "DiabetesMellitus":
+            MessageLookupByLibrary.simpleMessage("Diabetes mellitus"),
         "Diary": MessageLookupByLibrary.simpleMessage("Diary"),
+        "DoYouHaveDiseases": MessageLookupByLibrary.simpleMessage(
+            "Do you have any of the following diseases?"),
         "EatingHabits": MessageLookupByLibrary.simpleMessage("Eating habits"),
         "Email": MessageLookupByLibrary.simpleMessage("Email"),
         "Fats": MessageLookupByLibrary.simpleMessage("Fats"),
+        "Female": MessageLookupByLibrary.simpleMessage("Female"),
         "Fiber": MessageLookupByLibrary.simpleMessage("Fiber"),
+        "GlutenIntolerance":
+            MessageLookupByLibrary.simpleMessage("Gluten intolerance"),
         "Login": MessageLookupByLibrary.simpleMessage("Login"),
+        "Male": MessageLookupByLibrary.simpleMessage("Male"),
         "Meal": MessageLookupByLibrary.simpleMessage("Meal"),
         "NoAccount": MessageLookupByLibrary.simpleMessage("No account?"),
         "Password": MessageLookupByLibrary.simpleMessage("Password"),
         "PhysicalActivity":
             MessageLookupByLibrary.simpleMessage("Physical activity"),
+        "PolycysticOvarySyndrome":
+            MessageLookupByLibrary.simpleMessage("Polycystic ovary syndrome"),
         "Proteins": MessageLookupByLibrary.simpleMessage("Proteins"),
         "Questionnaire": MessageLookupByLibrary.simpleMessage("Questionnaire"),
         "RepeatPassword":
             MessageLookupByLibrary.simpleMessage("Repeat password"),
         "Return": MessageLookupByLibrary.simpleMessage("Return"),
         "SighUp": MessageLookupByLibrary.simpleMessage("Sigh up"),
+        "ThyroidDisease":
+            MessageLookupByLibrary.simpleMessage("Thyroid disease"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Welcome to be.ai - you intuitive nutrition assistant!"),
+        "YourAge": MessageLookupByLibrary.simpleMessage("Your age"),
+        "YourDesiredWeight":
+            MessageLookupByLibrary.simpleMessage("Your desired weight"),
+        "YourHeight": MessageLookupByLibrary.simpleMessage("Your height"),
+        "YourSex": MessageLookupByLibrary.simpleMessage("Your sex"),
+        "YourWeight": MessageLookupByLibrary.simpleMessage("Your weight"),
         "title": MessageLookupByLibrary.simpleMessage("Welcome to be.ai!")
       };
 }
