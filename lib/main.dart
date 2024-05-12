@@ -84,7 +84,14 @@ class HomePage extends StatelessWidget {
                 ),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                    child: Text(S.of(context).WelcomeToBEAI),
+                    child: Text(
+                        S.of(context).WelcomeToBEAI,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 24,
+                        ),
+                        textAlign: TextAlign.center
+                    ),
                 ),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
