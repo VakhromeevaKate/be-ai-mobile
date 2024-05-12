@@ -440,6 +440,16 @@ class S {
     );
   }
 
+  /// `Are you taking any medications?`
+  String get AreYouTakingMedications {
+    return Intl.message(
+      'Are you taking any medications?',
+      name: 'AreYouTakingMedications',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Do you play sports`
   String get DoYouPlaySports {
     return Intl.message(

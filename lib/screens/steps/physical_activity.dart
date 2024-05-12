@@ -11,8 +11,11 @@ class PhysicalActivity extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: Text(S.of(context).Activity),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          child: Text(
+            S.of(context).Activity,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          ),
         ),
         SizedBox(
             height: MediaQuery.of(context).size.height * 0.65,

@@ -38,6 +38,7 @@
   "ThyroidDisease": "Thyroid disease",
   "GlutenIntolerance": "Gluten intolerance",
   "AnyOther": "Any other (enter)",
+  "AreYouTakingMedications": "Are you taking any medications?",
   "DoYouPlaySports": "Do you play sports",
   "Yes": "Yes",
   "No": "No",

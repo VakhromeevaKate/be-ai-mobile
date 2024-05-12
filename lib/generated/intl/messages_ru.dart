@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Account": MessageLookupByLibrary.simpleMessage("Профиль"),
         "Activity": MessageLookupByLibrary.simpleMessage("Активность"),
         "AnyOther": MessageLookupByLibrary.simpleMessage("Другое (вписать)"),
+        "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
+            "Вы принимаете какие-либо препараты?"),
         "Atherosclerosis": MessageLookupByLibrary.simpleMessage("Атеросклероз"),
         "Camera": MessageLookupByLibrary.simpleMessage("Камера"),
         "Carbohydrates": MessageLookupByLibrary.simpleMessage("Углеводы"),
