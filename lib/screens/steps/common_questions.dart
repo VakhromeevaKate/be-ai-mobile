@@ -74,7 +74,11 @@ class _CommonQuestions extends State<CommonQuestions> {
                         margin: const EdgeInsets.symmetric(vertical: 0),
                         width: double.infinity,
                         height: 60,
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey),
+                          borderRadius: BorderRadius.circular(4.0),
+                            color: Colors.white,
+                        ),
                         child: DropdownButtonHideUnderline(
                           child: ButtonTheme(
                             alignedDropdown: true,
