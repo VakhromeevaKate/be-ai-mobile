@@ -107,5 +107,7 @@
       }
     }
   },
-  "HowOftenDoYouDrinkAlcohol": "How often do you drink alcohol?"
+  "HowOftenDoYouDrinkAlcohol": "How often do you drink alcohol?",
+  "AddAMeal": "Add a meal",
+  "Water": "Water"
 }

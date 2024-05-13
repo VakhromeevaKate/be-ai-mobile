@@ -38,6 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Account": MessageLookupByLibrary.simpleMessage("Account"),
         "Activity": MessageLookupByLibrary.simpleMessage("Activity"),
+        "AddAMeal": MessageLookupByLibrary.simpleMessage("Add a meal"),
         "AnyOther": MessageLookupByLibrary.simpleMessage("Any other (enter)"),
         "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
             "Are you taking any medications?"),
@@ -127,6 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "TrainingSimulators":
             MessageLookupByLibrary.simpleMessage("Training simulators"),
         "Walking": MessageLookupByLibrary.simpleMessage("Walking"),
+        "Water": MessageLookupByLibrary.simpleMessage("Water"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
             "Welcome to be.ai - you intuitive nutrition assistant!"),
         "WhatAerobicExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(
