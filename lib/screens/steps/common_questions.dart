@@ -120,7 +120,8 @@ class _CommonQuestions extends State<CommonQuestions> {
                         TextField(
                           keyboardType: TextInputType.number,
                           inputFormatters: <TextInputFormatter>[
-                            FilteringTextInputFormatter.digitsOnly
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(3),
                           ],
                           decoration: InputDecoration(
                             filled: true,
@@ -155,7 +156,8 @@ class _CommonQuestions extends State<CommonQuestions> {
                         TextField(
                           keyboardType: TextInputType.number,
                           inputFormatters: <TextInputFormatter>[
-                            FilteringTextInputFormatter.digitsOnly
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(3),
                           ],
                           decoration: InputDecoration(
                             filled: true,
@@ -190,7 +192,8 @@ class _CommonQuestions extends State<CommonQuestions> {
                         TextField(
                           keyboardType: TextInputType.number,
                           inputFormatters: <TextInputFormatter>[
-                            FilteringTextInputFormatter.digitsOnly
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(3),
                           ],
                           decoration: InputDecoration(
                             filled: true,
@@ -225,7 +228,8 @@ class _CommonQuestions extends State<CommonQuestions> {
                         TextField(
                           keyboardType: TextInputType.number,
                           inputFormatters: <TextInputFormatter>[
-                            FilteringTextInputFormatter.digitsOnly
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(3),
                           ],
                           decoration: InputDecoration(
                             filled: true,
