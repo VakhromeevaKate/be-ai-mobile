@@ -11,6 +11,39 @@ class EatingHabits extends StatefulWidget {
 }
 
 class _EatingHabits extends State<EatingHabits> {
+  var doesSkipBreakfast = false;
+  var skipBreakfastTimes = 0;
+
+  var sugaryDrinksPerWeek = {
+    "once": false,
+    "from2to4": false,
+    "from5to10": false,
+    "moreThan11": false,
+  };
+
+  var cupsOfWaterPerDay = {
+    "one": false,
+    "from2to4": false,
+    "from5to8": false,
+    "moreThan9": false,
+  };
+
+  var fastFood = {
+    "oncePerMonth": false,
+    "upTo3TimesPerMonth": false,
+    "upTo2TimesPerWeek": false,
+    "upTo4TimesPerWeek": false,
+    "moreThan5TimesPerWeek": false,
+  };
+
+  var alcohol = {
+    "oncePerMonth": false,
+    "upTo3TimesPerMonth": false,
+    "upTo2TimesPerWeek": false,
+    "upTo4TimesPerWeek": false,
+    "moreThan5TimesPerWeek": false,
+  };
+
   @override
   Widget build(BuildContext context) {
     return Column(
