@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 import '../../generated/l10n.dart';
 import '../../theme/colors/light_colors.dart';
 
-class EatingHabits extends StatelessWidget {
+class EatingHabits extends StatefulWidget {
   const EatingHabits({super.key});
 
+  @override
+  State<EatingHabits> createState() => _EatingHabits();
+}
+
+class _EatingHabits extends State<EatingHabits> {
   @override
   Widget build(BuildContext context) {
     return Column(
