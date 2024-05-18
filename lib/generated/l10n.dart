@@ -799,6 +799,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Add water`
+  String get AddWater {
+    return Intl.message(
+      'Add water',
+      name: 'AddWater',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

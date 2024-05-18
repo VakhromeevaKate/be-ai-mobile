@@ -1,5 +1,6 @@
 import 'package:be_ai_mobile/screens/display_picture_screen.dart';
 import 'package:be_ai_mobile/screens/home.dart';
+import 'package:be_ai_mobile/screens/meal.dart';
 import 'package:be_ai_mobile/screens/questionnaire.dart';
 import 'package:be_ai_mobile/screens/signup.dart';
 import 'package:be_ai_mobile/screens/take_picture_screen.dart';
@@ -40,7 +41,8 @@ Future<void> main() async {
       '/questionnaire': (BuildContext context) => QuestionnaireScreen(key: UniqueKey()),
       '/home': (BuildContext context) => HomeScreen(key: UniqueKey()),
       '/camera': (BuildContext context) => TakePictureScreen(key: UniqueKey(), camera: firstCamera),
-      '/gallery': (BuildContext context) => DisplayPictureScreen(key: UniqueKey(), imagePath: '',)
+      '/gallery': (BuildContext context) => DisplayPictureScreen(key: UniqueKey(), imagePath: ''),
+      '/meal': (BuildContext context) => MealScreen(key: UniqueKey()),
     },
   ));
   FlutterNativeSplash.remove();

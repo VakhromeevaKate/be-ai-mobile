@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Account": MessageLookupByLibrary.simpleMessage("Account"),
         "Activity": MessageLookupByLibrary.simpleMessage("Activity"),
         "AddAMeal": MessageLookupByLibrary.simpleMessage("Add a meal"),
+        "AddWater": MessageLookupByLibrary.simpleMessage("Add water"),
         "AnyOther": MessageLookupByLibrary.simpleMessage("Any other (enter)"),
         "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
             "Are you taking any medications?"),
