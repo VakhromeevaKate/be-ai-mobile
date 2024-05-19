@@ -73,7 +73,9 @@ class _EatingHabits extends State<EatingHabits> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).HowOftenDoYouSkipBreakfastInAWeek),
+                                Flexible(
+                                  child: Text(S.of(context).HowOftenDoYouSkipBreakfastInAWeek),
+                                ),
                               ],
                             ),
                             const Row(
@@ -209,7 +211,9 @@ class _EatingHabits extends State<EatingHabits> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).HowManyCupsOfWaterDoYouDrinkPerDay),
+                                Flexible(
+                                  child: Text(S.of(context).HowManyCupsOfWaterDoYouDrinkPerDay),
+                                ),
                               ],
                             ),
                             Row(
@@ -302,7 +306,9 @@ class _EatingHabits extends State<EatingHabits> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).HowOftenDoYouEatFastFoodOrEatOut),
+                                Flexible(
+                                  child: Text(S.of(context).HowOftenDoYouEatFastFoodOrEatOut),
+                                ),
                               ],
                             ),
                             Row(
@@ -414,7 +420,9 @@ class _EatingHabits extends State<EatingHabits> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).HowOftenDoYouDrinkAlcohol),
+                                Flexible(
+                                  child: Text(S.of(context).HowOftenDoYouDrinkAlcohol),
+                                ),
                               ],
                             ),
                             Row(

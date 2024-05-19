@@ -78,19 +78,20 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                   child: CircleAvatar(
                     backgroundImage: AssetImage('assets/images/icon.png'),
-                    radius: 180,
+                    minRadius: 50,
+                    maxRadius: 160,
                   ),
                 ),
                 Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
                     child: Text(
                         S.of(context).WelcomeToBEAI,
                         style: const TextStyle(
                             fontWeight: FontWeight.normal,
-                            fontSize: 24,
+                            fontSize: 20,
                         ),
                         textAlign: TextAlign.center
                     ),

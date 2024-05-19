@@ -141,7 +141,9 @@ class _PhysicalActivity extends State<PhysicalActivity> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).WhatAerobicExercisesDoYouDo),
+                                Flexible(
+                                  child: Text(S.of(context).WhatAerobicExercisesDoYouDo),
+                                ),
                               ],
                             ),
                             Row(
@@ -302,7 +304,9 @@ class _PhysicalActivity extends State<PhysicalActivity> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).WhatStrengthExercisesDoYouDo),
+                                Flexible(
+                                  child: Text(S.of(context).WhatStrengthExercisesDoYouDo),
+                                ),
                               ],
                             ),
                             Row(
@@ -445,7 +449,9 @@ class _PhysicalActivity extends State<PhysicalActivity> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).HowOftenDoYouDoStrengthExercises),
+                                Flexible(
+                                  child: Text(S.of(context).HowOftenDoYouDoStrengthExercises),
+                                ),
                               ],
                             ),
                             Row(
@@ -577,7 +583,9 @@ class _PhysicalActivity extends State<PhysicalActivity> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).HowOftenDoYouDoAerobicExercises),
+                                Flexible(
+                                  child: Text(S.of(context).HowOftenDoYouDoAerobicExercises),
+                                ),
                               ],
                             ),
                             Row(
@@ -709,7 +717,9 @@ class _PhysicalActivity extends State<PhysicalActivity> {
                           children: [
                             Row(
                               children: [
-                                Text(S.of(context).DoYouHaveAnyRestrictionsForPlayingSports),
+                                Flexible(
+                                  child: Text(S.of(context).DoYouHaveAnyRestrictionsForPlayingSports),
+                                ),
                               ],
                             ),
                             Row(

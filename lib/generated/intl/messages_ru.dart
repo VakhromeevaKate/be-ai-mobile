@@ -93,7 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Как часто вы пропускаете завтрак за неделю?"),
         "IAmNotDoingIt": MessageLookupByLibrary.simpleMessage("Не выполняю"),
-        "Login": MessageLookupByLibrary.simpleMessage("Войти"),
+        "Login": MessageLookupByLibrary.simpleMessage("Вход"),
         "Male": MessageLookupByLibrary.simpleMessage("Мужчина"),
         "Meal": MessageLookupByLibrary.simpleMessage("Еда"),
         "MoreThanNMinutesPerWeek": m0,
@@ -122,7 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Повторите пароль"),
         "Return": MessageLookupByLibrary.simpleMessage("Назад"),
         "Running": MessageLookupByLibrary.simpleMessage("Бег"),
-        "SighUp": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+        "SighUp": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "Swimming": MessageLookupByLibrary.simpleMessage("Плавание"),
         "ThyroidDisease": MessageLookupByLibrary.simpleMessage(
             "Заболевания щитовидной железы"),

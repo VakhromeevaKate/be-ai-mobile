@@ -258,7 +258,9 @@ class _CommonQuestions extends State<CommonQuestions> {
                       children: [
                         Row(
                           children: [
-                            Text(S.of(context).DoYouHaveDiseases),
+                            Flexible(
+                              child: Text(S.of(context).DoYouHaveDiseases),
+                            ),
                           ],
                         ),
                         Row(
@@ -400,7 +402,9 @@ class _CommonQuestions extends State<CommonQuestions> {
                       children: [
                         Row(
                           children: [
-                            Text(S.of(context).AreYouTakingMedications),
+                            Flexible(
+                              child:Text(S.of(context).AreYouTakingMedications),
+                            ),
                           ],
                         ),
                         Row(
