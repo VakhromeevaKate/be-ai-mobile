@@ -103,7 +103,7 @@ class Diary extends StatefulWidget {
               ),
               onPressed: (){
                 // Navigator.pushNamed(context, '/home');
-                Navigator.pushNamed(context, '/questionnaire');
+                Navigator.pushNamed(context, '/meal');
               },
               child: Text(S.of(context).AddAMeal),
             ),
