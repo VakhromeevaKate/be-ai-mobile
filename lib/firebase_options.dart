@@ -64,7 +64,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '506191668527',
     projectId: 'be-ai-mobile',
     storageBucket: 'be-ai-mobile.appspot.com',
-    iosBundleId: 'com.example.beAiMobile',
+    iosBundleId: 'com.vakhromeevae.beAiMobile',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -73,7 +73,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '506191668527',
     projectId: 'be-ai-mobile',
     storageBucket: 'be-ai-mobile.appspot.com',
-    iosBundleId: 'com.example.beAiMobile',
+    iosBundleId: 'com.vakhromeevae.beAiMobile',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
