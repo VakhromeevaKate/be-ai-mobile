@@ -52,7 +52,6 @@ class _CommonQuestions extends State<CommonQuestions> {
         ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.65,
-          child: Expanded(
             child: ListView(
               padding: const EdgeInsets.all(8),
               children: <Widget>[
@@ -466,7 +465,6 @@ class _CommonQuestions extends State<CommonQuestions> {
                 ),
               ],
             )
-          )
         ),
       ],
     );

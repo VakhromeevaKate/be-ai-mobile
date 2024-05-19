@@ -58,473 +58,471 @@ class _EatingHabits extends State<EatingHabits> {
         ),
         SizedBox(
             height: MediaQuery.of(context).size.height * 0.65,
-            child: Expanded(
-                child: ListView(
-                  padding: const EdgeInsets.all(8),
-                  children: <Widget>[
-                    Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: LightColors.kLightGreen,
-                        ),
-                        margin: const EdgeInsets.symmetric(vertical: 16),
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
+            child: ListView(
+              padding: const EdgeInsets.all(8),
+              children: <Widget>[
+                Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: LightColors.kLightGreen,
+                    ),
+                    margin: const EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Row(
                           children: [
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: Text(S.of(context).HowOftenDoYouSkipBreakfastInAWeek),
-                                ),
-                              ],
-                            ),
-                            const Row(
-                              children: [
-                                Text('0-7'),
-                              ],
-                            ),
-                            TextField(
-                              keyboardType: TextInputType.number,
-                              inputFormatters: <TextInputFormatter>[
-                                FilteringTextInputFormatter.digitsOnly,
-                                LengthLimitingTextInputFormatter(1),
-                              ],
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(4.0),
-                                  borderSide:  const BorderSide(color: Colors.grey),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(4.0),
-                                  borderSide:  const BorderSide(color: LightColors.kGreen),
-                                ),
-                              ),
+                            Flexible(
+                              child: Text(S.of(context).HowOftenDoYouSkipBreakfastInAWeek),
                             ),
                           ],
-                        )
-                    ),
-                    Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: LightColors.kLightGreen,
                         ),
-                        margin: const EdgeInsets.symmetric(vertical: 16),
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
+                        const Row(
                           children: [
-                            Row(
-                              children: [
-                                Flexible( child:
-                                    Text(S.of(context).HowOftenDoYouDrinkSugaryDrinks),
-                                )
-                              ],
+                            Text('0-7'),
+                          ],
+                        ),
+                        TextField(
+                          keyboardType: TextInputType.number,
+                          inputFormatters: <TextInputFormatter>[
+                            FilteringTextInputFormatter.digitsOnly,
+                            LengthLimitingTextInputFormatter(1),
+                          ],
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(4.0),
+                              borderSide:  const BorderSide(color: Colors.grey),
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: sugaryDrinksPerWeek["once"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        sugaryDrinksPerWeek["once"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        sugaryDrinksPerWeek["once"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).OneTimePerWeekOrLess),
-                              ],
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(4.0),
+                              borderSide:  const BorderSide(color: LightColors.kGreen),
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: sugaryDrinksPerWeek["from2to4"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        sugaryDrinksPerWeek["from2to4"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        sugaryDrinksPerWeek["from2to4"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NTimesPerWeek("2-4")),
-                              ],
+                          ),
+                        ),
+                      ],
+                    )
+                ),
+                Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: LightColors.kLightGreen,
+                    ),
+                    margin: const EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Flexible( child:
+                                Text(S.of(context).HowOftenDoYouDrinkSugaryDrinks),
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: sugaryDrinksPerWeek["once"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    sugaryDrinksPerWeek["once"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    sugaryDrinksPerWeek["once"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: sugaryDrinksPerWeek["from5to10"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        sugaryDrinksPerWeek["from5to10"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        sugaryDrinksPerWeek["from5to10"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NTimesPerWeek("5-10")),
-                              ],
+                            Text(S.of(context).OneTimePerWeekOrLess),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: sugaryDrinksPerWeek["from2to4"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    sugaryDrinksPerWeek["from2to4"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    sugaryDrinksPerWeek["from2to4"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: sugaryDrinksPerWeek["moreThan11"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        sugaryDrinksPerWeek["moreThan11"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        sugaryDrinksPerWeek["moreThan11"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).MoreThanNTimesPerWeek(11)),
-                              ],
+                            Text(S.of(context).NTimesPerWeek("2-4")),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: sugaryDrinksPerWeek["from5to10"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    sugaryDrinksPerWeek["from5to10"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    sugaryDrinksPerWeek["from5to10"] = false;
+                                  }
+                                });
+                              },
+                            ),
+                            Text(S.of(context).NTimesPerWeek("5-10")),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: sugaryDrinksPerWeek["moreThan11"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    sugaryDrinksPerWeek["moreThan11"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    sugaryDrinksPerWeek["moreThan11"] = false;
+                                  }
+                                });
+                              },
+                            ),
+                            Text(S.of(context).MoreThanNTimesPerWeek(11)),
+                          ],
+                        ),
+                      ],
+                    )
+                ),
+                Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: LightColors.kLightGreen,
+                    ),
+                    margin: const EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Flexible(
+                              child: Text(S.of(context).HowManyCupsOfWaterDoYouDrinkPerDay),
                             ),
                           ],
-                        )
-                    ),
-                    Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: LightColors.kLightGreen,
                         ),
-                        margin: const EdgeInsets.symmetric(vertical: 16),
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
+                        Row(
                           children: [
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: Text(S.of(context).HowManyCupsOfWaterDoYouDrinkPerDay),
-                                ),
-                              ],
+                            Checkbox(
+                              tristate: true,
+                              value: cupsOfWaterPerDay["one"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    cupsOfWaterPerDay["one"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    cupsOfWaterPerDay["one"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: cupsOfWaterPerDay["one"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        cupsOfWaterPerDay["one"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        cupsOfWaterPerDay["one"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).OnePerDayOrLess),
-                              ],
+                            Text(S.of(context).OnePerDayOrLess),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: cupsOfWaterPerDay["from2to4"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    cupsOfWaterPerDay["from2to4"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    cupsOfWaterPerDay["from2to4"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: cupsOfWaterPerDay["from2to4"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        cupsOfWaterPerDay["from2to4"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        cupsOfWaterPerDay["from2to4"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NPerDay("2-4")),
-                              ],
+                            Text(S.of(context).NPerDay("2-4")),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: cupsOfWaterPerDay["from5to8"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    cupsOfWaterPerDay["from5to8"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    cupsOfWaterPerDay["from5to8"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: cupsOfWaterPerDay["from5to8"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        cupsOfWaterPerDay["from5to8"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        cupsOfWaterPerDay["from5to8"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NPerDay("5-8")),
-                              ],
+                            Text(S.of(context).NPerDay("5-8")),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: cupsOfWaterPerDay["moreThan9"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    cupsOfWaterPerDay["moreThan9"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    cupsOfWaterPerDay["moreThan9"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: cupsOfWaterPerDay["moreThan9"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        cupsOfWaterPerDay["moreThan9"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        cupsOfWaterPerDay["moreThan9"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).MoreThanNPerDay(9)),
-                              ],
+                            Text(S.of(context).MoreThanNPerDay(9)),
+                          ],
+                        ),
+                      ],
+                    )
+                ),
+                Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: LightColors.kLightGreen,
+                    ),
+                    margin: const EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Flexible(
+                              child: Text(S.of(context).HowOftenDoYouEatFastFoodOrEatOut),
                             ),
                           ],
-                        )
-                    ),
-                    Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: LightColors.kLightGreen,
                         ),
-                        margin: const EdgeInsets.symmetric(vertical: 16),
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
+                        Row(
                           children: [
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: Text(S.of(context).HowOftenDoYouEatFastFoodOrEatOut),
-                                ),
-                              ],
+                            Checkbox(
+                              tristate: true,
+                              value: fastFood["oncePerMonth"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    fastFood["oncePerMonth"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    fastFood["oncePerMonth"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: fastFood["oncePerMonth"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        fastFood["oncePerMonth"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        fastFood["oncePerMonth"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).OnePerMonth),
-                              ],
+                            Text(S.of(context).OnePerMonth),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: fastFood["upTo3TimesPerMonth"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    fastFood["upTo3TimesPerMonth"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    fastFood["upTo3TimesPerMonth"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: fastFood["upTo3TimesPerMonth"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        fastFood["upTo3TimesPerMonth"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        fastFood["upTo3TimesPerMonth"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NPerMonth('2-3')),
-                              ],
+                            Text(S.of(context).NPerMonth('2-3')),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: fastFood["upTo2TimesPerWeek"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    fastFood["upTo2TimesPerWeek"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    fastFood["upTo2TimesPerWeek"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: fastFood["upTo2TimesPerWeek"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        fastFood["upTo2TimesPerWeek"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        fastFood["upTo2TimesPerWeek"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NTimesPerWeek('1-2')),
-                              ],
+                            Text(S.of(context).NTimesPerWeek('1-2')),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: fastFood["upTo4TimesPerWeek"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    fastFood["upTo4TimesPerWeek"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    fastFood["upTo4TimesPerWeek"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: fastFood["upTo4TimesPerWeek"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        fastFood["upTo4TimesPerWeek"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        fastFood["upTo4TimesPerWeek"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NTimesPerWeek('3-4')),
-                              ],
+                            Text(S.of(context).NTimesPerWeek('3-4')),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: fastFood["moreThan5TimesPerWeek"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    fastFood["moreThan5TimesPerWeek"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    fastFood["moreThan5TimesPerWeek"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: fastFood["moreThan5TimesPerWeek"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        fastFood["moreThan5TimesPerWeek"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        fastFood["moreThan5TimesPerWeek"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).MoreThanNTimesPerWeek(5)),
-                              ],
+                            Text(S.of(context).MoreThanNTimesPerWeek(5)),
+                          ],
+                        ),
+                      ],
+                    )
+                ),
+                Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: LightColors.kLightGreen,
+                    ),
+                    margin: const EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Flexible(
+                              child: Text(S.of(context).HowOftenDoYouDrinkAlcohol),
                             ),
                           ],
-                        )
-                    ),
-                    Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: LightColors.kLightGreen,
                         ),
-                        margin: const EdgeInsets.symmetric(vertical: 16),
-                        padding: const EdgeInsets.all(8),
-                        child: Column(
+                        Row(
                           children: [
-                            Row(
-                              children: [
-                                Flexible(
-                                  child: Text(S.of(context).HowOftenDoYouDrinkAlcohol),
-                                ),
-                              ],
+                            Checkbox(
+                              tristate: true,
+                              value: alcohol["oncePerMonth"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    alcohol["oncePerMonth"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    alcohol["oncePerMonth"] = false;
+                                  }
+                                });
+                              },
                             ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: alcohol["oncePerMonth"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        alcohol["oncePerMonth"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        alcohol["oncePerMonth"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).OnePerMonth),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: alcohol["upTo3TimesPerMonth"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        alcohol["upTo3TimesPerMonth"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        alcohol["upTo3TimesPerMonth"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NPerMonth('2-3')),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: alcohol["upTo2TimesPerWeek"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        alcohol["upTo2TimesPerWeek"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        alcohol["upTo2TimesPerWeek"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NTimesPerWeek('1-2')),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: alcohol["upTo4TimesPerWeek"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        alcohol["upTo4TimesPerWeek"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        alcohol["upTo4TimesPerWeek"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).NTimesPerWeek('3-4')),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Checkbox(
-                                  tristate: true,
-                                  value: alcohol["moreThan5TimesPerWeek"] == true,
-                                  onChanged: (bool? value) {
-                                    setState(() {
-                                      if (value != null) {
-                                        alcohol["moreThan5TimesPerWeek"] = true;
-                                        // medicines = "";
-                                      } else {
-                                        alcohol["moreThan5TimesPerWeek"] = false;
-                                      }
-                                    });
-                                  },
-                                ),
-                                Text(S.of(context).MoreThanNTimesPerWeek(5)),
-                              ],
-                            ),
+                            Text(S.of(context).OnePerMonth),
                           ],
-                        )
-                    ),
-                  ],
-                )
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: alcohol["upTo3TimesPerMonth"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    alcohol["upTo3TimesPerMonth"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    alcohol["upTo3TimesPerMonth"] = false;
+                                  }
+                                });
+                              },
+                            ),
+                            Text(S.of(context).NPerMonth('2-3')),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: alcohol["upTo2TimesPerWeek"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    alcohol["upTo2TimesPerWeek"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    alcohol["upTo2TimesPerWeek"] = false;
+                                  }
+                                });
+                              },
+                            ),
+                            Text(S.of(context).NTimesPerWeek('1-2')),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: alcohol["upTo4TimesPerWeek"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    alcohol["upTo4TimesPerWeek"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    alcohol["upTo4TimesPerWeek"] = false;
+                                  }
+                                });
+                              },
+                            ),
+                            Text(S.of(context).NTimesPerWeek('3-4')),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              tristate: true,
+                              value: alcohol["moreThan5TimesPerWeek"] == true,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    alcohol["moreThan5TimesPerWeek"] = true;
+                                    // medicines = "";
+                                  } else {
+                                    alcohol["moreThan5TimesPerWeek"] = false;
+                                  }
+                                });
+                              },
+                            ),
+                            Text(S.of(context).MoreThanNTimesPerWeek(5)),
+                          ],
+                        ),
+                      ],
+                    )
+                ),
+              ],
             )
         ),
       ],
