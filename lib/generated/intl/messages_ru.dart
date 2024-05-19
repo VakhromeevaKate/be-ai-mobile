@@ -38,7 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Account": MessageLookupByLibrary.simpleMessage("Профиль"),
         "Activity": MessageLookupByLibrary.simpleMessage("Активность"),
-        "AddAMeal": MessageLookupByLibrary.simpleMessage("Добавить прием пищи"),
+        "AddAMeal": MessageLookupByLibrary.simpleMessage("Добавить пищу"),
         "AddWater": MessageLookupByLibrary.simpleMessage("Добавить воду"),
         "AnyOther": MessageLookupByLibrary.simpleMessage("Другое (вписать)"),
         "AreYouTakingMedications": MessageLookupByLibrary.simpleMessage(
@@ -131,7 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Walking": MessageLookupByLibrary.simpleMessage("Ходьба"),
         "Water": MessageLookupByLibrary.simpleMessage("Вода"),
         "WelcomeToBEAI": MessageLookupByLibrary.simpleMessage(
-            "Добро пожаловать в be.ai! - Ваш помощник по интуитивному правильному питанию"),
+            "Добро пожаловать в be.ai - Ваш помощник по интуитивному правильному питанию"),
         "WhatAerobicExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(
             "Какие аэробные упражнения вы выполняете?"),
         "WhatStrengthExercisesDoYouDo": MessageLookupByLibrary.simpleMessage(

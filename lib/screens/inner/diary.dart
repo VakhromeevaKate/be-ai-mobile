@@ -47,8 +47,8 @@ class Diary extends StatefulWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          margin: const EdgeInsets.symmetric(vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+          // margin: const EdgeInsets.symmetric(vertical: 8),
           child: Center(
               child: SfCircularChart(
                   title: ChartTitle(text: S.of(context).DailyReport),
@@ -56,8 +56,8 @@ class Diary extends StatefulWidget {
                   series: <CircularSeries<ChartData, String>>[
                     DoughnutSeries<ChartData, String>(
                         // radius: '80%',
-                        innerRadius: '40%',
-                        dataSource: locale == 'Ru-ru' ? pieDataRu : pieDataEn,
+                        // innerRadius: '40%',
+                        dataSource: locale == 'En-en' ? pieDataEn : pieDataRu,
                         xValueMapper: (ChartData data, _) => data.xData,
                         yValueMapper: (ChartData data, _) => data.yData,
                         pointColorMapper:(ChartData data,  _) => data.color,
@@ -68,8 +68,8 @@ class Diary extends StatefulWidget {
           ),
         ),
         Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            margin: const EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            // margin: const EdgeInsets.symmetric(vertical: 8),
             height: 200,
             child: Center(
                 child: SfCartesianChart(
