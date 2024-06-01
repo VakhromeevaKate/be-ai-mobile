@@ -101,6 +101,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
                     // Pass the automatically generated path to
                     // the DisplayPictureScreen widget.
                     imagePath: image.path,
+                    session: _session,
                   ),
                 ),
               );
