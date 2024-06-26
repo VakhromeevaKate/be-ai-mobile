@@ -41,7 +41,7 @@ Future<void> main() async {
       '/questionnaire': (BuildContext context) => QuestionnaireScreen(key: UniqueKey()),
       '/home': (BuildContext context) => HomeScreen(key: UniqueKey()),
       '/camera': (BuildContext context) => TakePictureScreen(key: UniqueKey(), camera: firstCamera),
-      '/gallery': (BuildContext context) => DisplayPictureScreen(key: UniqueKey(), imagePath: '', session: null),
+      '/gallery': (BuildContext context) => DisplayPictureScreen(key: UniqueKey(), imagePath: '', session: null, outputs: null),
       '/meal': (BuildContext context) => MealScreen(key: UniqueKey()),
     },
   ));

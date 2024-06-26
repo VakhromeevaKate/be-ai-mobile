@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
@@ -8,8 +7,9 @@ import 'package:onnxruntime/onnxruntime.dart';
 class DisplayPictureScreen extends StatelessWidget {
   final String imagePath;
   final OrtSession? session;
+  final List<OrtValue?>? outputs;
 
-  const DisplayPictureScreen({super.key, required this.imagePath, required this.session});
+  const DisplayPictureScreen({super.key, required this.imagePath, required this.session, required this.outputs});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +28,13 @@ class DisplayPictureScreen extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('inputCount: ${session!.inputCount}'),
-                  Text('inputNames: ${session!.inputNames.toString()}'),
-                  Text('outputCount: ${session!.outputCount.toString()}'),
-                  Text('outputNames: ${session!.outputNames.toString()}'),
+                  Text('Output size: ${outputs?.length ?? 'unknown'}'),
                   Text('address: ${session!.address.toString()}'),
+                  //Text('inputCount: ${session!.inputCount}'),
+                  //Text('inputNames: ${session!.inputNames.toString()}'),
+                  //Text('outputCount: ${session!.outputCount.toString()}'),
+                  //Text('outputNames: ${session!.outputNames.toString()}'),
+                  //Text('address: ${session!.address.toString()}'),
                 ],
               )
             ],

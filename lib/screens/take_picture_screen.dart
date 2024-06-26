@@ -1,3 +1,4 @@
+import 'package:image/image.dart' as img;
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
   late CameraController _controller;
   late Future<void> _initializeControllerFuture;
   late OrtSession _session;
+  late List<OrtValue?>? _outputs;
 
   @override
   void initState() {
@@ -58,6 +60,24 @@ class TakePictureScreenState extends State<TakePictureScreen> {
     _session = OrtSession.fromBuffer(bytes, sessionOptions!);
   }
 
+  Future<void> performInference(img.Image? image) async {
+    final imgWidth = image?.width ?? 256;
+    final imgHeight = image?.height ?? 256;
+
+    // we have 3 channels jpeg image (RGB) by default
+    final shape = [imgWidth, imgHeight, 3];
+    final inputOrt = OrtValueTensor.createTensorWithDataList(image as List, shape);
+    final inputs = {'input': inputOrt};
+    final runOptions = OrtRunOptions();
+    final outputs = await _session.runAsync(runOptions, inputs);
+    inputOrt.release();
+    runOptions.release();
+    outputs?.forEach((element) {
+      element?.release();
+    });
+    _outputs = outputs;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +110,12 @@ class TakePictureScreenState extends State<TakePictureScreen> {
 
               // Attempt to take a picture and get the file `image`
               // where it was saved.
-              final image = await _controller.takePicture();
+              final imageXFile = await _controller.takePicture();
+              // final path = imageXFile.path;
+              final bytes = await imageXFile.readAsBytes();
+              final img.Image? image = img.decodeImage(bytes);
+
+              await performInference(image);
 
               if (!context.mounted) return;
 
@@ -100,8 +125,9 @@ class TakePictureScreenState extends State<TakePictureScreen> {
                   builder: (context) => DisplayPictureScreen(
                     // Pass the automatically generated path to
                     // the DisplayPictureScreen widget.
-                    imagePath: image.path,
+                    imagePath: imageXFile.path,
                     session: _session,
+                    outputs: _outputs,
                   ),
                 ),
               );
