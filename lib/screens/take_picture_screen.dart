@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:image/image.dart' as img;
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
@@ -24,7 +26,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
   late CameraController _controller;
   late Future<void> _initializeControllerFuture;
   late OrtSession _session;
-  late List<OrtValue?>? _outputs;
+  List<OrtValue?>? _outputs;
 
   @override
   void initState() {
@@ -115,7 +117,12 @@ class TakePictureScreenState extends State<TakePictureScreen> {
               final bytes = await imageXFile.readAsBytes();
               final img.Image? image = img.decodeImage(bytes);
 
-              await performInference(image);
+              try {
+                await performInference(image);
+              } catch (e) {
+                print('performInference failed ${e.toString()}');
+              }
+
 
               if (!context.mounted) return;
 
