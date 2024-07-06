@@ -63,21 +63,34 @@ class TakePictureScreenState extends State<TakePictureScreen> {
   }
 
   Future<void> performInference(img.Image? image) async {
+    final startTime = DateTime.now().millisecondsSinceEpoch;
     final imgWidth = image?.width ?? 256;
     final imgHeight = image?.height ?? 256;
 
     // we have 3 channels jpeg image (RGB) by default
     final shape = [imgWidth, imgHeight, 3];
     final inputOrt = OrtValueTensor.createTensorWithDataList(image as List, shape);
-    final inputs = {'input': inputOrt};
+    final inputs = {'be.ai input': inputOrt};
     final runOptions = OrtRunOptions();
-    final outputs = await _session.runAsync(runOptions, inputs);
-    inputOrt.release();
-    runOptions.release();
-    outputs?.forEach((element) {
-      element?.release();
-    });
-    _outputs = outputs;
+    var outputs;
+    try {
+      outputs = await _session.runAsync(runOptions, inputs);
+      inputOrt.release();
+      runOptions.release();
+      if (outputs != null) {
+        outputs.forEach((element) {
+          element?.release();
+        });
+        _outputs = outputs;
+      } else {
+        print('be.ai Smth gone wrong with outputs - they are empty');
+      }
+    } catch (error) {
+      print('be.ai Error occured while performInference: $error');
+    }
+
+    final endTime = DateTime.now().millisecondsSinceEpoch;
+    print('be.ai infer cost time=${endTime - startTime}ms');
   }
 
   @override
