@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui;
 import 'package:syncfusion_flutter_charts/charts.dart';
 import '../../generated/l10n.dart';

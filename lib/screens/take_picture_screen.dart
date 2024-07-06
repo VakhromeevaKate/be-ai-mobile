@@ -1,5 +1,6 @@
-import 'dart:math';
+// import 'dart:math';
 
+import 'dart:ui' as ui;
 import 'package:image/image.dart' as img;
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
@@ -62,15 +63,39 @@ class TakePictureScreenState extends State<TakePictureScreen> {
     _session = OrtSession.fromBuffer(bytes, sessionOptions!);
   }
 
-  Future<void> performInference(img.Image? image) async {
+  Future<List<double>> imageToFloatTensor(ui.Image image) async {
+    final imageAsFloatBytes = (await image.toByteData(format: ui.ImageByteFormat.rawRgba))!;
+    final rgbaUints = Uint8List.view(imageAsFloatBytes.buffer);
+
+    final indexed = rgbaUints.indexed;
+    return [
+      ...indexed.where((e) => e.$1 % 4 == 0).map((e) => e.$2.toDouble()),
+      ...indexed.where((e) => e.$1 % 4 == 1).map((e) => e.$2.toDouble()),
+      ...indexed.where((e) => e.$1 % 4 == 2).map((e) => e.$2.toDouble()),
+    ];
+  }
+
+  Future<void> performInference(XFile imageXFile) async {
+    // final imagePath = imageXFile.path;
+    final Uint8List bytes = await imageXFile.readAsBytes();
+    final img.Image? image = img.decodeImage(bytes);
+
+    // ByteData blissBytes = await rootBundle.load(imagePath);
+    // print('performInference $blissBytes');
+
+    // final decodedImage = await decodeImageFromList(Uint8List.sublistView(blissBytes));
+    final decodedImage = await decodeImageFromList(bytes);
+    final rgbFloats = await imageToFloatTensor(decodedImage);
+
+    print('performInference started');
     final startTime = DateTime.now().millisecondsSinceEpoch;
     final imgWidth = image?.width ?? 256;
     final imgHeight = image?.height ?? 256;
 
-    // we have 3 channels jpeg image (RGB) by default
-    final shape = [imgWidth, imgHeight, 3];
-    final inputOrt = OrtValueTensor.createTensorWithDataList(image as List, shape);
-    final inputs = {'be.ai input': inputOrt};
+    final inputOrt = OrtValueTensor.createTensorWithDataList(Float32List.fromList(rgbFloats), [1, 3, imgWidth, imgHeight]);
+
+    final inputs = {'input0':inputOrt};
+
     final runOptions = OrtRunOptions();
     var outputs;
     try {
@@ -83,14 +108,14 @@ class TakePictureScreenState extends State<TakePictureScreen> {
         });
         _outputs = outputs;
       } else {
-        print('be.ai Smth gone wrong with outputs - they are empty');
+        print('performInference Smth gone wrong with outputs - they are empty');
       }
     } catch (error) {
-      print('be.ai Error occured while performInference: $error');
+      print('performInference Error occured while performInference: $error');
     }
 
     final endTime = DateTime.now().millisecondsSinceEpoch;
-    print('be.ai infer cost time=${endTime - startTime}ms');
+    print('performInference infer cost time=${endTime - startTime}ms');
   }
 
   @override
@@ -127,11 +152,11 @@ class TakePictureScreenState extends State<TakePictureScreen> {
               // where it was saved.
               final imageXFile = await _controller.takePicture();
               // final path = imageXFile.path;
-              final bytes = await imageXFile.readAsBytes();
-              final img.Image? image = img.decodeImage(bytes);
+              // final bytes = await imageXFile.readAsBytes();
+              // final img.Image? image = img.decodeImage(bytes);
 
               try {
-                await performInference(image);
+                await performInference(imageXFile);
               } catch (e) {
                 print('performInference failed ${e.toString()}');
               }
