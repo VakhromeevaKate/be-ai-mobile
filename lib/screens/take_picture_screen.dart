@@ -89,8 +89,8 @@ class TakePictureScreenState extends State<TakePictureScreen> {
 
     print('performInference started');
     final startTime = DateTime.now().millisecondsSinceEpoch;
-    final imgWidth = image?.width ?? 256;
-    final imgHeight = image?.height ?? 256;
+    final imgWidth = 512; //image?.width ?? 512;
+    final imgHeight = 512; //image?.height ?? 512;
 
     final inputOrt = OrtValueTensor.createTensorWithDataList(Float32List.fromList(rgbFloats), [1, 3, imgWidth, imgHeight]);
 
