@@ -1,14 +1,11 @@
-// import 'dart:math';
-
-import 'dart:ui' as ui;
-import 'package:image/image.dart' as img;
+import 'dart:async';
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:gal/gal.dart';
+import 'package:path_provider/path_provider.dart';
 import '../theme/colors/light_colors.dart';
 import 'display_picture_screen.dart';
-import 'package:onnxruntime/onnxruntime.dart';
 
 // A screen that allows users to take a picture using a given camera.
 class TakePictureScreen extends StatefulWidget {
@@ -26,8 +23,6 @@ class TakePictureScreen extends StatefulWidget {
 class TakePictureScreenState extends State<TakePictureScreen> {
   late CameraController _controller;
   late Future<void> _initializeControllerFuture;
-  late OrtSession _session;
-  List<OrtValue?>? _outputs;
 
   @override
   void initState() {
@@ -43,8 +38,8 @@ class TakePictureScreenState extends State<TakePictureScreen> {
 
     // Next, initialize the controller. This returns a Future.
     _initializeControllerFuture = _controller.initialize();
-    OrtEnv.instance.init();
-    inferModel();
+    // OrtEnv.instance.init();
+    // inferModel();
   }
 
   @override
@@ -52,70 +47,6 @@ class TakePictureScreenState extends State<TakePictureScreen> {
     // Dispose of the controller when the widget is disposed.
     _controller.dispose();
     super.dispose();
-    OrtEnv.instance.release();
-  }
-
-  void inferModel() async {
-    final sessionOptions = OrtSessionOptions();
-    const assetFileName = 'assets/models/model.onnx';
-    final rawAssetFile = await rootBundle.load(assetFileName);
-    final bytes = rawAssetFile.buffer.asUint8List();
-    _session = OrtSession.fromBuffer(bytes, sessionOptions!);
-  }
-
-  Future<List<double>> imageToFloatTensor(ui.Image image) async {
-    final imageAsFloatBytes = (await image.toByteData(format: ui.ImageByteFormat.rawRgba))!;
-    final rgbaUints = Uint8List.view(imageAsFloatBytes.buffer);
-
-    final indexed = rgbaUints.indexed;
-    return [
-      ...indexed.where((e) => e.$1 % 4 == 0).map((e) => e.$2.toDouble()),
-      ...indexed.where((e) => e.$1 % 4 == 1).map((e) => e.$2.toDouble()),
-      ...indexed.where((e) => e.$1 % 4 == 2).map((e) => e.$2.toDouble()),
-    ];
-  }
-
-  Future<void> performInference(XFile imageXFile) async {
-    // final imagePath = imageXFile.path;
-    final Uint8List bytes = await imageXFile.readAsBytes();
-    final img.Image? image = img.decodeImage(bytes);
-
-    // ByteData blissBytes = await rootBundle.load(imagePath);
-    // print('performInference $blissBytes');
-
-    // final decodedImage = await decodeImageFromList(Uint8List.sublistView(blissBytes));
-    final decodedImage = await decodeImageFromList(bytes);
-    final rgbFloats = await imageToFloatTensor(decodedImage);
-
-    print('performInference started');
-    final startTime = DateTime.now().millisecondsSinceEpoch;
-    final imgWidth = 512; //image?.width ?? 512;
-    final imgHeight = 512; //image?.height ?? 512;
-
-    final inputOrt = OrtValueTensor.createTensorWithDataList(Float32List.fromList(rgbFloats), [1, 3, imgWidth, imgHeight]);
-
-    final inputs = {'input0':inputOrt};
-
-    final runOptions = OrtRunOptions();
-    var outputs;
-    try {
-      outputs = await _session.runAsync(runOptions, inputs);
-      inputOrt.release();
-      runOptions.release();
-      if (outputs != null) {
-        outputs.forEach((element) {
-          element?.release();
-        });
-        _outputs = outputs;
-      } else {
-        print('performInference Smth gone wrong with outputs - they are empty');
-      }
-    } catch (error) {
-      print('performInference Error occured while performInference: $error');
-    }
-
-    final endTime = DateTime.now().millisecondsSinceEpoch;
-    print('performInference infer cost time=${endTime - startTime}ms');
   }
 
   @override
@@ -154,13 +85,9 @@ class TakePictureScreenState extends State<TakePictureScreen> {
               // final path = imageXFile.path;
               // final bytes = await imageXFile.readAsBytes();
               // final img.Image? image = img.decodeImage(bytes);
-
-              try {
-                await performInference(imageXFile);
-              } catch (e) {
-                print('performInference failed ${e.toString()}');
-              }
-
+              var appDocDir = await getTemporaryDirectory();
+              String savePath = "${appDocDir.path}/${imageXFile.name}";
+              await Gal.putImage(savePath);
 
               if (!context.mounted) return;
 
@@ -170,9 +97,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
                   builder: (context) => DisplayPictureScreen(
                     // Pass the automatically generated path to
                     // the DisplayPictureScreen widget.
-                    imagePath: imageXFile.path,
-                    session: _session,
-                    outputs: _outputs,
+                    imagePath: savePath,
                   ),
                 ),
               );
