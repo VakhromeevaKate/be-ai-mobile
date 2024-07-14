@@ -42,7 +42,7 @@ class DisplayPictureScreenState extends State<DisplayPictureScreen> {
     File imageFile = File(widget.imagePath);
     OrtEnv.instance.init();
     inferModel();
-    runForward(imageFile);
+    // runForward(imageFile);
   }
 
   @override
