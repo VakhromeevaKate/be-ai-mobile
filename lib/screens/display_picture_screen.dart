@@ -49,6 +49,7 @@ class DisplayPictureScreenState extends State<DisplayPictureScreen> {
   void dispose() {
     super.dispose();
     OrtEnv.instance.release();
+    print('display picture dispose called');
   }
 
   void inferModel() async {
